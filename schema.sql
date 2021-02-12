@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS barn_db;
+
+CREATE DATABASE barn_db;
