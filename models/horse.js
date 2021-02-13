@@ -3,20 +3,50 @@ module.exports = function(sequelize, DataTypes) {
       name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          len: [1]
-        }
       },
-      body: {
+      age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      breed: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      amFlakes: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      pmFlakes: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      grainServing: {
+        type: DataTypes.DECIMAL(2,1),
+        allowNull: true
+      },
+      lastDewormer: {
+        type: DataTypes.DATEONLY,
+        allowNull: true
+      },
+      lastVaccination: {
+        type: DataTypes.DATEONLY,
+        allowNull: true
+      },
+      lastCoggins: {
+        type: DataTypes.DATEONLY,
+        allowNull: true
+      },
+      lastFarrier: {
+        type: DataTypes.DATEONLY,
+        allowNull: true
+      },
+      Notes: {
         type: DataTypes.TEXT,
-        allowNull: false,
-        len: [1]
+        allowNull: true
       }
     });
   
     Horse.associate = function(models) {
-      // We're saying that a Post should belong to an Author
-      // A Post can't be created without an Author due to the foreign key constraint
       Horse.belongsTo(models.Owner, {
         foreignKey: {
           allowNull: false
