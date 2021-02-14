@@ -22,12 +22,7 @@ $(function() {
 
     $(".select-owner").on("click", function(event) {
       var id = $(this).data("id");
-      $.get("/api/owners/" + id, function(data) {
-        data[0].Horses.forEach(horse => {
-          console.log(horse.name);
-        });
-        // location.reload();
-      });
+      window.location.assign("/owners/" + id);
     });
   
     $(".delete-owner").on("click", function(event) {
@@ -38,4 +33,9 @@ $(function() {
           location.reload();
         });
     });
+
+    $(".vaccinate").on("click", function(event) {
+      let today = new Date().toISOString().slice(0, 10)
+      console.log(today)
+    })
 })

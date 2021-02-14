@@ -13,4 +13,21 @@ router.get("/", (req, res) => {
     })
 })
 
+router.get("/owners/:id", (req, res) => {
+  db.Owner.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: {
+          model: db.Horse,
+          required: false,
+          where: {
+              OwnerId: req.params.id
+          }
+      }
+  }).then(response => {
+      res.render("owner", { owner: unpack(response)});
+  })
+})
+
 module.exports = router;
