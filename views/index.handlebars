@@ -1,1 +1,27 @@
-{{!-- <h1>Horses!</h1> --}}
+<h1>Horse Owners!</h1>
+
+<h2>The following is a list of owners</h2>
+
+<ul>
+    {{#each owners}}
+        {{!-- {{#unless devourd}} --}}
+        <li> 
+          {{ this.lastName }}, {{ this.firstName }}
+        </li>
+        {{!-- {{/unless}} --}}
+    {{/each }}
+</ul>
+
+
+<h2>Add a owner</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="owner-first">First Name:</label>
+    <input type="text" id="owner-first" name="firstName">
+    <label for="owner-last">Last Name:</label>
+    <input type="text" id="owner-last" name="lastName">
+  </div>
+
+  <button type="submit">Add Owner</button>
+</form>
