@@ -22,7 +22,7 @@ router.post("/owners", (req, res) => {
     });
 })
 
-
+// This is not done yet.  We need to figure out where we are going to edit the owner
 router.put("/owners/:id", (req, res) => {
     db.Owner.update({lastName: "Johnson"}, {
         where: {
