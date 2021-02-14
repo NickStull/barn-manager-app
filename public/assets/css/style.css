@@ -1,0 +1,41 @@
+.form-group {
+    color:black;
+}
+.delete-owner{
+        background-color: gray; color: black;
+        border-radius: 8px;
+
+}
+.select-owner,
+.add{
+    background-color: gray; color: black;
+    border-radius: 8px;}
+
+h1{
+    text-emphasis: bold;
+    text-align:  center;
+    text-decoration: underline;
+}
+h2 {text-decoration: underline;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    background-image: url("horse copy.jpg"); /* The image used */
+    background-color:white; /* Used if the image is unavailable */
+    /* You must set a specified height */
+    background-attachment: fixed;
+    background-position: bottom right;/* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+   
+}
+ul, li {list-style-type: none;}
+
+.firstpage{
+ 
+    background-color:lightgray;
+/* opacity: 0.2; */
+width:40%;
+height:  40%;
+box-shadow: 5px 10px #888888;
+}
