@@ -10,8 +10,8 @@ $(function() {
         data: newOwner
       }).then(function(response){
         location.reload();
-      })
-  
+      });
+    });
     //   $(".devour").on("click", function(event) {
     //     $.ajax("/api/owners/" + this.id, {
     //       type: "PUT"
@@ -20,12 +20,12 @@ $(function() {
     //     })
     //   })
   
-    $(".delete").on("click", function(event) {
-        $.ajax("/api/owners/" + this.id, {
+    $(".delete-owner").on("click", function(event) {
+        var id = $(this).data("id");
+        $.ajax("/api/owners/" + id, {
           type: "DELETE"
         }).then(function(response){
           location.reload();
-        })
-      })
-    })
-  })
+        });
+    });
+})

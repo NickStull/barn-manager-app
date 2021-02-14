@@ -6,7 +6,7 @@
     {{#each owners}}
         {{!-- {{#unless devourd}} --}}
         <li> 
-          {{ this.lastName }}, {{ this.firstName }}
+          <button class="delete-owner" data-id="{{ this.id }}">DELETE!</button> {{ this.lastName }}, {{ this.firstName }}
         </li>
         {{!-- {{/unless}} --}}
     {{/each }}
