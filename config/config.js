@@ -7,6 +7,7 @@ module.exports =
     "password": process.env.DB_PASS,
     "database": "barn_db",
     "host": process.env.DB_HOST,
+    "post": 3306,
     "dialect": "mysql"
   },
   "test": {
