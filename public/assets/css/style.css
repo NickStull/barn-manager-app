@@ -39,3 +39,8 @@ width:40%;
 height:  40%;
 box-shadow: 5px 10px #888888;
 }
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}

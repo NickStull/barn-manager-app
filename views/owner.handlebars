@@ -2,11 +2,54 @@
 
 <h2> {{ owner.firstName }} {{ owner.lastName }}</h2>
 
-{{#each owner.Horses}}
-    <h3> {{ this.name }} </h3>
-    <h3> {{ this.breed }} </h3>
-    <button class="vaccinate">Vaccinate</button>
-{{/each}}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Breed</th>
+            <th>Flakes a.m.</th>
+            <th>Flakes p.m.</th>
+            <th>Grain Serving</th>
+            <th>Last Dewormed</th>
+            <th>Last Vaccination</th>
+            <th>Update Vaccination</th>
+            <th>Last Coggins</th>
+            <th>Last Farrier</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each owner.Horses}}
+        <tr>
+            <td> {{ this.name }} </td>
+            <td> {{ this.age }} </td>
+            <td> {{ this.breed }} </td>
+            <td> {{ this.amFlakes }} </td>
+            <td> {{ this.pmFlakes }} </td>
+            <td> {{ this.grainServing }} </td>
+            <td> {{ this.lastDewormer }} </td>
+            <td> {{ this.lastVaccination }} </td>
+            <td> <button class="vaccinate" data-id="{{ this.id }}">Vaccinate</button> </td>
+            <td> {{ this.lastCoggins }} </td>
+            <td> {{ this.lastFarrier }} </td>
+            <td> {{ this.Notes }} </td>
+            
+        </tr>
+        {{/each}}
+    </tbody>    
+</table>        
 
-{{!-- {{#if owner.isManager}} --}}
-{{!-- /if --}}
+<h2>Add a horse</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="horse-name">Name:</label>
+    <input type="text" id="horse-name" name="horseName"><BR>
+    <label for="owner-last">Last Name:</label>
+    <input type="text" id="owner-last" name="lastName">
+  </div>
+
+  <button class="add" type="submit">Add Owner</button>
+</form>
+</div>
