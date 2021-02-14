@@ -1,0 +1,12 @@
+<h1>Owner Inf0</h1>
+
+<h2> {{ owner.firstName }} {{ owner.lastName }}</h2>
+
+{{#each owner.Horses}}
+    <h3> {{ this.name }} </h3>
+    <h3> {{ this.breed }} </h3>
+{{/each}}
+
+{{!-- {{#if owner.isManager}} --}}
+<button class="vaccinate">Vaccinate</button>
+{{!-- /if --}}

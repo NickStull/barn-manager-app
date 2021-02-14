@@ -1,19 +1,20 @@
 let router = require("express").Router();
 let db = require("../models");
 
-router.get("/owners/:id", (req, res) => {
-    db.Owner.findAll({
-        include: {
-            model: db.Horse,
-            required: true,
-            where: {
-                OwnerId: req.params.id
-            }
-        }
-    }).then(response => {
-        res.json(response);
-    })
-})
+// Moved to HTML routes. Leaving her just in case.
+// router.get("/owners/:id", (req, res) => {
+//     db.Owner.findAll({
+//         include: {
+//             model: db.Horse,
+//             required: true,
+//             where: {
+//                 OwnerId: req.params.id
+//             }
+//         }
+//     }).then(response => {
+//         res.json(response);
+//     })
+// })
 
 router.post("/owners", (req, res) => {
     db.Owner.create(req.body).then(response => {
