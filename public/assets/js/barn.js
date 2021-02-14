@@ -19,6 +19,16 @@ $(function() {
     //       location.reload();
     //     })
     //   })
+
+    $(".select-owner").on("click", function(event) {
+      var id = $(this).data("id");
+      $.get("/api/owners/" + id, function(data) {
+        data[0].Horses.forEach(horse => {
+          console.log(horse.name);
+        });
+        // location.reload();
+      });
+    });
   
     $(".delete-owner").on("click", function(event) {
         var id = $(this).data("id");
