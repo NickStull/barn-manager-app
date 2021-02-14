@@ -14,11 +14,11 @@ module.exports = function(sequelize, DataTypes) {
       },
       amFlakes: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       pmFlakes: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       grainServing: {
         type: DataTypes.DECIMAL(2,1),
