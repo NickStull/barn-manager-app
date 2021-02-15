@@ -13,6 +13,17 @@ search or select an owner !! are we turning the list of owners into a drop down 
     {{/each }}
 </ul>
 
+<div class="owner-dropdown">
+  <button class="dropbtn">Owners</button>
+  <div id="myDropdown" class="dropdown-content">
+    {{#each owners}}
+        <a class="select-owner" data-id="{{ this.id }}">
+          {{ this.firstName}} {{ this.lastName }}
+        </a>
+    {{/each}}
+  </div>
+</div>
+
 
 <h2>Add a owner</h2>
 <form class="create-form">

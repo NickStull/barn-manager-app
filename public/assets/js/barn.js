@@ -12,13 +12,6 @@ $(function() {
         location.reload();
       });
     });
-    //   $(".devour").on("click", function(event) {
-    //     $.ajax("/api/owners/" + this.id, {
-    //       type: "PUT"
-    //     }).then(function(response){
-    //       location.reload();
-    //     })
-    //   })
 
     $(".select-owner").on("click", function(event) {
       var id = $(this).data("id");
@@ -38,4 +31,24 @@ $(function() {
       let today = new Date().toISOString().slice(0, 10)
       console.log(today)
     })
+
+        /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    $(".owner-dropdown").on("click", function() {
+      $("#myDropdown").toggleClass("show");
+    });
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    };
 })
+
