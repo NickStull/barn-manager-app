@@ -1,3 +1,22 @@
+#mainForm{
+    width: 40%;
+    background-color: #3D72A4;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+h2{
+    font-size: 30px;
+    color: black;
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold;
+}
+
+#ownerContainer{
+    padding-left: 20px;
+    margin-top: 0px;
+}
+
 .form-group {
     color:black;
 }
@@ -11,35 +30,39 @@
     background-color: gray; color: black;
     border-radius: 8px;}
 
-h1{
-    text-emphasis: bold;
+#mainTitle h1{
+    font-family: 'Questrial', sans-serif;
+    color: #3D72A4;
+    font-size: 40px;
+    font-weight: bold;
     text-align:  center;
+    /* background-color: rgba(29,29,29); */
     text-decoration: underline;
 }
-h2 {text-decoration: underline;
-}
 
-body {
+
+/* body {
     font-family: 'Questrial', sans-serif;
     background-image: url("horse copy.jpg"); /* The image used */
-    background-color:white; /* Used if the image is unavailable */
-    /* You must set a specified height */
+    /* background-color: white; Used if the image is unavailable */
+/*   
     background-attachment: fixed;
-    background-position: bottom right;/* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: bottom right;  */
+    /* background-repeat: no-repeat; Do not repeat the image */
    
-}
-ul, li {list-style-type: none;}
+/* } */ 
 
-.firstpage{
- 
-    background-color:lightgray;
-/* opacity: 0.2; */
-width:80%;
-/* height:  10%; */
-box-shadow: 5px 10px #888888;
-margin-left:10%;
+.body { 
+    background-image: url("horsecopy.jpg") ;
+  
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+   
+    background-color:white;
+    background-position: bottom right;
 }
+
+ul, li {list-style-type: none;}
 
 th, td {
     padding: 5px;
@@ -90,4 +113,16 @@ th, td {
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+  #addTitle{
+      font-size: 25px;
+      font-weight: bold;
+      color: black;
+  }
+
+  a.modal-button{
+     float: right;
+     margin-top: -60px;
+  }
+
 
