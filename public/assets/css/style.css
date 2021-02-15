@@ -7,6 +7,9 @@
 }
 h2{
     font-size: 30px;
+    margin-left: 20px;
+    margin-top: -50px;
+    padding-bottom:20px ;
     color: black;
     font-family: 'Questrial', sans-serif;
     font-weight: bold;
@@ -120,6 +123,7 @@ th, td {
   }
 
   a.modal-button{
+    background-color: indigo;
      float: right;
      margin-top: -60px;
   }
