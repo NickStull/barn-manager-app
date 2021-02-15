@@ -32,6 +32,13 @@ $(function() {
       let id = $(this).data("id");
       let column = $(this).data("update");
       console.log(`Updating ${column} to ${today} for horse id: ${id}`);
+
+      $.ajax("/api/horses/" + id, {
+        type: "PUT",
+        data: {column, today}
+      }).then(function(response){
+        location.reload();
+      })
     })
 
         /* When the user clicks on the button,
