@@ -45,12 +45,14 @@ router.delete("/owners/:id", (req, res) => {
 })
 
 router.put("/horses/:id", (req, res) => {
-    console.log(req.body);
-    db.Horses.update(req.body.today, {
-        where: {
-            id: req.params.id
-        }
-    }).then(function(response){
+    var column = req.body.column;
+    var today = req.body.today;
+    // console.log(column);
+    // console.log(today);
+    db.Horse.update(
+        { [column]: today },
+        { where: {id:req.params.id} }
+    ).then(function(response){
         res.send("Changed horse info");
     })
 });
