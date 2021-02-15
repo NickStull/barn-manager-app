@@ -35,9 +35,10 @@ ul, li {list-style-type: none;}
  
     background-color:lightgray;
 /* opacity: 0.2; */
-width:40%;
-height:  40%;
+width:80%;
+/* height:  10%; */
 box-shadow: 5px 10px #888888;
+margin-left:10%;
 }
 
 th, td {
@@ -89,3 +90,4 @@ th, td {
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
