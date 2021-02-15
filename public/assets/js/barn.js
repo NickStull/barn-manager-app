@@ -53,15 +53,18 @@ $(function() {
       }
     };
 
-    $(".create-horse").on("submit", function(event) {
+    $(".add-horse").on("click", function(event) {
       event.preventDefault();
+      var id = $(this).data("id");
+      
       let newHorse = {
         horseName: $("#horse-name").val().trim(),
         horseAge: $("#horse-age").val().trim(),
-        horseBreed: $("#horse-breed").val().trim()
-        // Owner.id???
+        horseBreed: $("#horse-breed").val().trim(),
+        OwnerId: id
       }
-      $.ajax("/api/horse" + id, {
+      console.log(newHorse);
+      $.ajax("/api/horses/", {
         type: "POST",
         data: newHorse
       }).then(function(response){

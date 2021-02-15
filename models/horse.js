@@ -14,31 +14,38 @@ module.exports = function(sequelize, DataTypes) {
       },
       amFlakes: {
         type: DataTypes.INTEGER,
-        allowNull: true
+        allowNull: true,
+        defaultValue: 0
       },
       pmFlakes: {
         type: DataTypes.INTEGER,
-        allowNull: true
+        allowNull: true,
+        defaultValue: 0
       },
       grainServing: {
         type: DataTypes.DECIMAL(2,1),
-        allowNull: true
+        allowNull: true,
+        defaultValue: 0.0
       },
       lastDewormer: {
         type: DataTypes.DATEONLY,
-        allowNull: true
+        allowNull: true,
+        defaultValue: null
       },
       lastVaccination: {
         type: DataTypes.DATEONLY,
-        allowNull: true
+        allowNull: true,
+        defaultValue: null
       },
       lastCoggins: {
         type: DataTypes.DATEONLY,
-        allowNull: true
+        allowNull: true,
+        defaultValue: null
       },
       lastFarrier: {
         type: DataTypes.DATEONLY,
-        allowNull: true
+        allowNull: true,
+        defaultValue: null
       },
       Notes: {
         type: DataTypes.TEXT,

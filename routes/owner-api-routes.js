@@ -22,6 +22,20 @@ router.post("/owners", (req, res) => {
     });
 })
 
+router.post("/horses", (req, res) => {
+    console.log("------------req.body--------------");
+    console.log(req.body);
+    db.Horse.create({
+        name: req.body.horseName,
+        age: req.body.horseAge,
+        breed: req.body.horseBreed,
+        OwnerId: req.body.OwnerId
+    }).then(response => {
+        console.log(response);
+        res.send("Horse Added");
+    });
+})
+
 // This is not done yet.  We need to figure out where we are going to edit the owner
 router.put("/owners/:id", (req, res) => {
     db.Owner.update({lastName: "Johnson"}, {
