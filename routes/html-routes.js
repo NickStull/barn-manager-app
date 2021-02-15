@@ -26,6 +26,7 @@ router.get("/owners/:id", (req, res) => {
           }
       }
   }).then(response => {
+      console.log(unpack(response));
       res.render("owner", { owner: unpack(response)});
   })
 })

@@ -13,7 +13,6 @@
             <th>Grain Serving</th>
             <th>Last Dewormed</th>
             <th>Last Vaccination</th>
-            <th>Update Vaccination</th>
             <th>Last Coggins</th>
             <th>Last Farrier</th>
             <th>Notes</th>
@@ -21,21 +20,33 @@
     </thead>
     <tbody>
         {{#each owner.Horses}}
-        <tr>
-            <td> {{ this.name }} </td>
-            <td> {{ this.age }} </td>
-            <td> {{ this.breed }} </td>
-            <td> {{ this.amFlakes }} </td>
-            <td> {{ this.pmFlakes }} </td>
-            <td> {{ this.grainServing }} </td>
-            <td> {{ this.lastDewormer }} </td>
-            <td> {{ this.lastVaccination }} </td>
-            <td> <button class="vaccinate" data-id="{{ this.id }}">Vaccinate</button> </td>
-            <td> {{ this.lastCoggins }} </td>
-            <td> {{ this.lastFarrier }} </td>
-            <td> {{ this.Notes }} </td>
-            
-        </tr>
+            <tr>
+                <td> {{ this.name }} </td>
+                <td> {{ this.age }} </td>
+                <td> {{ this.breed }} </td>
+                <td> {{ this.amFlakes }} </td>
+                <td> {{ this.pmFlakes }} </td>
+                <td> {{ this.grainServing }} </td>
+                <td> {{ this.lastDewormer }} </td>
+                <td> {{ this.lastVaccination }} </td>
+                <td> {{ this.lastCoggins }} </td>
+                <td> {{ this.lastFarrier }} </td>
+                <td> {{ this.Notes }} </td>
+                
+            </tr>
+            <tr>
+                <td><button>Edit Info</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastDewormer">Set Today</button></td>
+                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastVaccination">Set Today</button></td>
+                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastCoggins">Set Today</button></td>
+                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Set Today</button></td>
+                <td></td>
+            </tr>
         {{/each}}
     </tbody>    
 </table>        
