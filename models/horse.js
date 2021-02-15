@@ -30,22 +30,22 @@ module.exports = function(sequelize, DataTypes) {
       lastDewormer: {
         type: DataTypes.DATEONLY,
         allowNull: true,
-        defaultValue: null
+        defaultValue: "2000-01-01"
       },
       lastVaccination: {
         type: DataTypes.DATEONLY,
         allowNull: true,
-        defaultValue: null
+        defaultValue: "2000-01-01"
       },
       lastCoggins: {
         type: DataTypes.DATEONLY,
         allowNull: true,
-        defaultValue: null
+        defaultValue: "2000-01-01"
       },
       lastFarrier: {
         type: DataTypes.DATEONLY,
         allowNull: true,
-        defaultValue: null
+        defaultValue: "2000-01-01"
       },
       Notes: {
         type: DataTypes.TEXT,
