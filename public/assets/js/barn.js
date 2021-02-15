@@ -59,5 +59,23 @@ $(function() {
         }
       }
     };
+
+    $(".add-horse").on("click", function(event) {
+      event.preventDefault();
+      var id = $(this).data("id");
+      
+      let newHorse = {
+        horseName: $("#horse-name").val().trim(),
+        horseAge: $("#horse-age").val().trim(),
+        horseBreed: $("#horse-breed").val().trim(),
+        horseNotes: $("#horse-notes").val().trim(),
+      }
+      $.ajax("/api/owners/" + id, {
+        type: "POST",
+        data: newHorse
+      }).then(function(response){
+        location.reload();
+      });
+    });
 })
 
