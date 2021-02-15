@@ -4,13 +4,12 @@
     opacity: 0.5;
     margin-top: 20px;
     margin-left: 10%;
-    height:30%;
+    height:300px;
     
 }
 h2{
     font-size: 30px;
     margin-left: 20px;
-    margin-top: -50px;
     padding-bottom:20px ;
     color: black;
     font-family: 'Quicksand', sans-serif;
@@ -29,42 +28,13 @@ h2{
         border-radius: 8px;
 
 }
-/* .select-owner, */
-.add
-    /* background-color: gray; color: black;
-    border-radius: 8px;
-    font-family: 'Quicksand', sans-serif;} */
-/* h1{
-    font-family: 'Big Shoulders Stencil Display', cursive;
-font-family: 'Spectral SC', serif;
-    color:black;
-    font-size: 40px;
-    font-weight: bold;
-    text-align:  center;
-    /* background-color: rgba(29,29,29); */
-    /* text-decoration: underline; */
- 
 
-
-/* body {
-    font-family: 'Questrial', sans-serif;
-    background-image: url("horse copy.jpg"); /* The image used */
-    /* background-color: white; Used if the image is unavailable */
-/*   
-    background-attachment: fixed;
-    background-position: bottom right;  */
-    /* background-repeat: no-repeat; Do not repeat the image */
-   
-/* } */ 
-
-
-   
 body{
         background-image: url("horsecopy.jpg"); /* The image used */
         background-color: white; /* Used if the image is unavailable */
         height: 120vh; /* You must set a specified height */
-        size:400vh;
-        background-position: bottom; /* Center the image */
+     
+        background-position: left-bottom; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
        
