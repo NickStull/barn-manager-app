@@ -34,8 +34,10 @@ $(function() {
         });
     });
 
-    $(".vaccinate").on("click", function(event) {
-      let today = new Date().toISOString().slice(0, 10)
-      console.log(today)
+    $(".setDate").on("click", function(event) {
+      let today = new Date().toISOString().slice(0, 10);
+      let id = $(this).data("id");
+      let column = $(this).data("update");
+      console.log(`Updating ${column} to ${today} for horse id: ${id}`);
     })
 })
