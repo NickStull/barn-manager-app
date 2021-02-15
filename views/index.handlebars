@@ -1,11 +1,28 @@
-<div id="mainTitle">
-<h1>Horse Manager</h1>
-
+<BR>
+<div class="toptitle">
+   <center>
+	<span>H</span>
+	<span>O</span>
+	<span>R</span>
+	<span>S</span>
+	<span>E</span>
+	<span></span>
+	<span>M</span>
+  	<span>A</span>
+	<span>N</span>
+	<span>A</span>
+  <span>G</span>
+	<span>E</span>
+  	<span>R</span>
 </div>
-<div id= "mainForm" class="box">
-  <h2>Horse Owners</h2>
+</center
+
+<div class="row">
+<div id="mainForm"class= "box">
+  <center>
+  <h2>Browse Current Owners</h2>
   <div class="owner-dropdown">
-    <button class="dropbtn">Owners</button>
+    <button class="dropbtn"> current owners</button>
       <div id="myDropdown" class="dropdown-content">
         {{#each owners}}
             <a class="select-owner" data-id="{{ this.id }}">
@@ -13,24 +30,11 @@
             </a>
         {{/each}}
       </div>
-  </div>
- 
-  <form class="create-form">
-    <div class="form-group">
-      <div class="field">
-        <label id="addTitle" class="label">Add a owner</label>
-        <label class="label" for="owner-first">First Name</label>
-        <div class="control">
+  </div><center><BR>
+  <h2>Add New Owner </h2> 
+        {{!-- <label id="addTitle" class="label">Add an owner</label> --}}
           <input id="owner-first" class="input" type="text" placeholder="first name" name="firstName">
-        </div>
-      </div>
-      <div class="field">
-        <label class="label" for="owner-last">last name</label>
-        <div class="control">
           <input id="owner-last"class="input" type="text" placeholder="last name" name="lastName">
-        </div>
-      </div>
-    </div>
-    <button class="button is-primary add" type="submit">Add owner</button>
+    <button id="addbut" class="button is-primary add" type="submit">Add owner</button>
   </form>
-</div>
+</center>
