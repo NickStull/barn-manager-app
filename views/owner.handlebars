@@ -1,58 +1,72 @@
+<BR>
 <div id="mainTitle">
-    <h1>Owner Info </h1>
+    <div class="toptitle">
+    <center>
+        <span>O</span>
+        <span>W</span>
+        <span>N</span>
+        <span>E</span>
+        <span>R</span>
+        <span></span>
+        <span>I</span>
+    <span>N</span>
+        <span>F</span>
+    <span>O</span>
+    </div>
 </div>
 <section class = "section">
     <div class = "container"> 
-        <p><a class = "button is-primary modal-button" data-target = "#modal">Add a Horse</a></p>
-    </div>
-    <div id = "modal" class = "modal">
-        <div class = "modal-background"></div>
-        <div class = "modal-card">
-            <header class = "modal-card-head">
-                <p class = "modal-card-title">Horse Information</p>
-                <button class = "delete" aria-label = "close"></button>
-            </header>
+        <p><a id="addbut" class = "button is-primary modal-button" data-target = "#modal">Add a Horse</a></p>
+    
+        <div id = "modal" class = "modal">
+            <div class = "modal-background"></div>
+            <div class = "modal-card">
+                <header class = "modal-card-head">
+                    <p class = "modal-card-title">Horse Information</p>
+                    <button class = "delete" aria-label = "close"></button>
+                </header>
         
-            <section class = "modal-card-body">
-                <div class = "content">
-                    <div class="field">
-                        {{!-- <label id="addTitle" class="label"></label> --}}
-                        <label class="label">Name</label>
-                        <div class="control">
-                            <input id="horse-name" class="input" type="name" placeholder="">
+                <section class = "modal-card-body">
+                    <div class = "content">
+                        <div class="field">
+                            <label id="addTitle" class="label"></label>
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input id="horse-name" class="input" type="name" placeholder="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="field">
-                        <label class="label">Age</label>
-                        <div class="control">
-                            <input id="horse-age"class="input" type="name" placeholder="">
+                        <div class="field">
+                            <label class="label">Age</label>
+                            <div class="control">
+                                <input id="horse-age"class="input" type="name" placeholder="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="field">
-                        <label class="label">Breed</label>
-                        <div class="control">
-                            <input id="horse-breed"class="input" type="name" placeholder="">
+                        <div class="field">
+                            <label class="label">Breed</label>
+                            <div class="control">
+                                <input id="horse-breed"class="input" type="name" placeholder="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="field">
-                        <label class="label">Notes</label>
-                        <div class="control">
-                            <input id="horse-notes"class="input" type="name" placeholder="">
+                        <div class="field">
+                            <label class="label">Notes</label>
+                            <div class="control">
+                                <input id="horse-notes"class="input" type="name" placeholder="">
+                            </div>
                         </div>
-                    </div>
-                </div>     
-            </section>
+                    </div>     
+                </section>
 
-            <footer class="modal-card-foot">
-                <button class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
-                <button id="btnClose" class="button">Cancel</button>
-            </footer> 
+                <footer class="modal-card-foot">
+                    <button class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
+                    <button id="btnClose" class="button">Cancel</button>
+                </footer> 
 
-        </div> {{!-- end modal-card --}}
-    </div> {{!-- end modal --}}
+            </div> {{!-- end modal-card --}}
+        </div> {{!-- end modal --}}
+    </div> {{!-- end container --}}    
 </section>
       
       <script>

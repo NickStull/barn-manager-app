@@ -22,16 +22,14 @@ router.post("/owners", (req, res) => {
     });
 })
 
-router.post("/horses", (req, res) => {
-    console.log("------------req.body--------------");
-    console.log(req.body);
+router.post("/owners/:id", (req, res) => {
     db.Horse.create({
         name: req.body.horseName,
         age: req.body.horseAge,
         breed: req.body.horseBreed,
-        OwnerId: req.body.OwnerId
+        Notes: req.body.horseNotes,
+        OwnerId: req.params.id
     }).then(response => {
-        console.log(response);
         res.send("Horse Added");
     });
 })
@@ -57,5 +55,16 @@ router.delete("/owners/:id", (req, res) => {
     })
     
 })
+
+router.put("/horses/:id", (req, res) => {
+    var column = req.body.column;
+    var today = req.body.today;
+    db.Horse.update(
+        { [column]: today },
+        { where: {id:req.params.id} }
+    ).then(function(response){
+        res.send("Changed horse info");
+    })
+});
 
 module.exports = router;

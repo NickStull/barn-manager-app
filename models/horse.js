@@ -15,17 +15,17 @@ module.exports = function(sequelize, DataTypes) {
       amFlakes: {
         type: DataTypes.INTEGER,
         allowNull: true,
-        defaultValue: null
+        defaultValue: 0
       },
       pmFlakes: {
         type: DataTypes.INTEGER,
         allowNull: true,
-        defaultValue: null
+        defaultValue: 0
       },
       grainServing: {
         type: DataTypes.DECIMAL(2,1),
         allowNull: true,
-        defaultValue: null
+        defaultValue: 0.0
       },
       lastDewormer: {
         type: DataTypes.DATEONLY,

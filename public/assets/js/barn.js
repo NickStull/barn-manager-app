@@ -32,6 +32,13 @@ $(function() {
       let id = $(this).data("id");
       let column = $(this).data("update");
       console.log(`Updating ${column} to ${today} for horse id: ${id}`);
+
+      $.ajax("/api/horses/" + id, {
+        type: "PUT",
+        data: {column, today}
+      }).then(function(response){
+        location.reload();
+      })
     })
 
         /* When the user clicks on the button,
@@ -61,10 +68,9 @@ $(function() {
         horseName: $("#horse-name").val().trim(),
         horseAge: $("#horse-age").val().trim(),
         horseBreed: $("#horse-breed").val().trim(),
-        OwnerId: id
+        horseNotes: $("#horse-notes").val().trim(),
       }
-      console.log(newHorse);
-      $.ajax("/api/horses/", {
+      $.ajax("/api/owners/" + id, {
         type: "POST",
         data: newHorse
       }).then(function(response){
