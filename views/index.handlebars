@@ -1,90 +1,35 @@
 <div id="mainTitle">
 <h1>Horse Manager</h1>
 </div>
-<form id= "mainForm" class="box">
+<div id= "mainForm" class="box">
   <h2>Horse Owners</h2>
   <div class="owner-dropdown">
-  <button class="dropbtn">Find a Owner</button>
-  <div id="myDropdown" class="dropdown-content">
-    {{#each owners}}
-        <a class="select-owner" data-id="{{ this.id }}">
-          {{ this.firstName}} {{ this.lastName }}
-        </a>
-    {{/each}}
+    <button class="dropbtn">Owners</button>
+      <div id="myDropdown" class="dropdown-content">
+        {{#each owners}}
+            <a class="select-owner" data-id="{{ this.id }}">
+             {{ this.firstName}} {{ this.lastName }}
+            </a>
+        {{/each}}
+      </div>
   </div>
+ 
+  <form class="create-form">
+    <div class="form-group">
+      <div class="field">
+        <label id="addTitle" class="label">Add a owner</label>
+        <label class="label" for="owner-first">First Name</label>
+        <div class="control">
+          <input id="owner-first" class="input" type="text" placeholder="first name" name="firstName">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="owner-last">last name</label>
+        <div class="control">
+          <input id="owner-last"class="input" type="text" placeholder="last name" name="lastName">
+        </div>
+      </div>
+    </div>
+    <button class="button is-primary add" type="submit">Add owner</button>
+  </form>
 </div>
-<ul>
-    {{#each owners}}
-        {{!-- {{#unless devourd}} --}}
-        <li> 
-          <button class="delete-owner" data-id="{{ this.id }}">DELETE!</button> <button class="select-owner" data-id="{{ this.id }}">{{ this.lastName }}, {{ this.firstName }}</button>
-        </li>
-        {{!-- {{/unless}} --}}
-    {{/each }}
-</ul>
-
-  <div class="field">
-    <label id="addTitle" class="label">Add a owner</label>
-    <label class="label">First Name</label>
-    <div class="control">
-      <input id="owner-first" class="input" type="name" placeholder="">
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">last name</label>
-    <div class="control">
-      <input id="owner-last"class="input" type="name" placeholder="last name">
-    </div>
-  </div>
-
-  <button class="button is-primary">Add owner</button>
-</form>
-{{!-- <div class="firstpage">
-  
-<h2>Horse Owners</h2>
-search or select an owner !! are we turning the list of owners into a drop down or maybe a search???
-
-<ul>
-    {{#each owners}}
-        {{#unless devourd}}
-        <li> 
-          <button class="delete-owner" data-id="{{ this.id }}">DELETE!</button> <button class="select-owner" data-id="{{ this.id }}">{{ this.lastName }}, {{ this.firstName }}</button>
-        </li>
-        {{/unless}}
-    {{/each }}
-</ul> 
-
-<div class="owner-dropdown">
-  <button class="dropbtn">Owners</button>
-  <div id="myDropdown" class="dropdown-content">
-    {{#each owners}}
-        <a class="select-owner" data-id="{{ this.id }}">
-          {{ this.firstName}} {{ this.lastName }}
-        </a>
-    {{/each}}
-  </div>
-</div> --}}
-
-
-{{!-- <h2>Add a owner</h2>
-<div class="dropdown is-active">
-  <div class="dropdown-trigger">
-    <button class="dropbtn"class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-      <span>Owners</span>
-      <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </div>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="owner-first">First Name:</label>
-    <input type="text" id="owner-first" name="firstName"><BR>
-    <label for="owner-last">Last Name:</label>
-    <input type="text" id="owner-last" name="lastName">
-  </div>
-
-  <button class="add" type="submit">Add Owner</button>
-</form>
-</div> --}} 
