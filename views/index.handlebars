@@ -17,13 +17,14 @@
 </div>
 </center>
 <a href="/api/logout"><button>Log Out</button></a>
-
-
 <center>
 <div class="row">
-  <div id="mainForm" class="box">
-    <center>
-      <BR><BR><BR>
+  
+<div id="mainForm" class="box">
+  <BR>
+      <button id="addbut" class="button is-primary modal-button new-owner-but" data-target="#modal">Add New Owner</button>
+
+<BR><BR>
       <div class="owner-dropdown dropdown">
         <button class="dropbtn"> Browse Current Owners</button>
         <div id="myDropdown" class="dropdown-content">
@@ -34,9 +35,7 @@
           {{/each}}
         </div>
       </div>
-<center>
-      <button id="addbut" class="button is-primary modal-button new-owner-but" data-target="#modal">Add New Owner</button>
-<center>
+</div>
       <div id="new-owner-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
