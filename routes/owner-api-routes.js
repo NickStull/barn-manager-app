@@ -125,7 +125,7 @@ router.put("/horses/:id", (req, res) => {
 });
 
 router.put("/edit-horses/:id", (req, res) => {
-    console.log("testing attention please");
+    console.log(req.body);
     db.Horse.update(
         {
             name: req.body.horseName,
@@ -145,5 +145,16 @@ router.put("/edit-horses/:id", (req, res) => {
         res.send("Edited horse info");
     });
 });
+
+router.put("/edit-horse-note/:id", (req, res) => {
+    db.Horse.update(
+        {
+            Notes: req.body.note
+        },
+        {where: {id:req.params.id}}
+    ).then(function(response){
+        res.send("Edited horse note")
+    })
+})
 
 module.exports = router;

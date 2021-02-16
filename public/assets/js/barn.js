@@ -95,33 +95,51 @@ $(function() {
       $("html").addClass("is-clipped");
       $("#edit-horse-" + id).addClass("is-active");
    });
+
+    $(".edit-note-but").click(function(){
+      let id = $(this).data("id");
+      $("html").addClass("is-clipped");
+      $("#edit-note-" + id).addClass("is-active");
+    })
     
     $(".close-modal").click(function() {
        $("html").removeClass("is-clipped");
        $("#new-horse-modal").removeClass("is-active");
        $(".edit-horse-modal").removeClass("is-active");
        $("#new-owner-modal").removeClass("is-active");
+       $(".edit-note-modal").removeClass("is-active");
     });
 
     $(".edit-horse").click(function(){
       let id = $(this).data("id");
       console.log(id);
       let editHorse = {
-        horseName: $("#edit-name").val().trim(),
-        horseAge: $("#edit-age").val().trim(),
-        horseBreed: $("#edit-breed").val().trim(),
-        flakesAM: $("#edit-flakes-am").val().trim(),
-        flakesPM: $("#edit-flakes-pm").val().trim(),
-        grainServing: $("#edit-grain-serving").val().trim(),
-        lastDewormed: $("#edit-dewormed").val().trim(),
-        lastVaccinated: $("#edit-vaccination").val().trim(),
-        lastCoggins: $("#edit-coggins").val().trim(),
-        lastFarrier: $("#edit-farrier").val().trim(),
-        editNotes: $("#edit-notes").val().trim()
+        horseName: $(`#edit-name-${id}`).val().trim(),
+        horseAge: $(`#edit-age-${id}`).val().trim(),
+        horseBreed: $(`#edit-breed-${id}`).val().trim(),
+        flakesAM: $(`#edit-flakes-am-${id}`).val().trim(),
+        flakesPM: $(`#edit-flakes-pm-${id}`).val().trim(),
+        grainServing: $(`#edit-grain-serving-${id}`).val().trim(),
+        lastDewormed: $(`#edit-dewormed-${id}`).val().trim(),
+        lastVaccinated: $(`#edit-vaccination-${id}`).val().trim(),
+        lastCoggins: $(`#edit-coggins-${id}`).val().trim(),
+        lastFarrier: $(`#edit-farrier-${id}`).val().trim(),
+        editNotes: $(`#edit-notes-${id}`).val().trim()
       }
       $.ajax("/api/edit-horses/" + id, {
         type: "PUT",
         data: editHorse
+      }).then(function(response){
+        location.reload();
+      })
+    })
+
+    $(".edit-horse-note").click(function(){
+      let id = $(this).data("id");
+      let note = $(`#edit-notes-solo-${id}`).val();
+      $.ajax("/api/edit-horse-note/" + id,{
+        type: "PUT",
+        data: {note}
       }).then(function(response){
         location.reload();
       })

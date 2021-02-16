@@ -66,8 +66,33 @@
                 <td> {{ this.lastVaccination }} </td>
                 <td> {{ this.lastCoggins }} </td>
                 <td> {{ this.lastFarrier }} </td>
-                <td> {{ this.Notes }} </td>
-
+                <td>
+                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Note</button>
+                    <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Edit Info</p>
+                                <button class="delete close-modal" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <div class="content">
+                                    <div class="field">
+                                        <label class="label">Notes</label>
+                                        <div class="control">
+                                            <textarea id="edit-notes-solo-{{this.id}}" class="input" type="name">{{ this.Notes }}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <footer class="modal-card-foot">
+                                <button class="button is-success edit-horse-note" type="submit"
+                                    data-id="{{ this.id }}">Save</button>
+                                <button id="btnClose" class="button close-modal">Cancel</button>
+                            </footer>
+                        </div>s
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -87,28 +112,28 @@
                                         <label id="addTitle" class="label"></label>
                                         <label class="label">Name</label>
                                         <div class="control">
-                                            <input id="edit-name" class="input" type="name" value="{{ this.name }}">
+                                            <input id="edit-name-{{this.id}}" class="input" type="name" value="{{ this.name }}">
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <label class="label">Age</label>
                                         <div class="control">
-                                            <input id="edit-age" class="input" type="name" value="{{ this.age }}">
+                                            <input id="edit-age-{{this.id}}" class="input" type="name" value="{{ this.age }}">
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <label class="label">Breed</label>
                                         <div class="control">
-                                            <input id="edit-breed" class="input" type="name" value="{{ this.breed }}">
+                                            <input id="edit-breed-{{this.id}}" class="input" type="name" value="{{ this.breed }}">
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <label class="label">Flakes a.m.</label>
                                         <div class="control">
-                                            <input id="edit-flakes-am" class="input" type="name"
+                                            <input id="edit-flakes-am-{{this.id}}" class="input" type="name"
                                                 value="{{ this.amFlakes }}">
                                         </div>
                                     </div>
@@ -116,7 +141,7 @@
                                     <div class="field">
                                         <label class="label">Flakes p.m.</label>
                                         <div class="control">
-                                            <input id="edit-flakes-pm" class="input" type="name"
+                                            <input id="edit-flakes-pm-{{this.id}}" class="input" type="name"
                                                 value="{{ this.pmFlakes }}">
                                         </div>
                                     </div>
@@ -124,7 +149,7 @@
                                     <div class="field">
                                         <label class="label">Grain Serving</label>
                                         <div class="control">
-                                            <input id="edit-grain-serving" class="input" type="name"
+                                            <input id="edit-grain-serving-{{this.id}}" class="input" type="name"
                                                 value="{{ this.grainServing }}">
                                         </div>
                                     </div>
@@ -132,7 +157,7 @@
                                     <div class="field">
                                         <label class="label">Last Dewormed</label>
                                         <div class="control">
-                                            <input id="edit-dewormed" class="input" type="name"
+                                            <input id="edit-dewormed-{{this.id}}" class="input" type="name"
                                                 value="{{ this.lastDewormer }}">
                                         </div>
                                     </div>
@@ -140,7 +165,7 @@
                                     <div class="field">
                                         <label class="label">Last Vaccination</label>
                                         <div class="control">
-                                            <input id="edit-vaccination" class="input" type="name"
+                                            <input id="edit-vaccination-{{this.id}}" class="input" type="name"
                                                 value="{{ this.lastVaccination }}">
                                         </div>
                                     </div>
@@ -148,7 +173,7 @@
                                     <div class="field">
                                         <label class="label">Last Coggins</label>
                                         <div class="control">
-                                            <input id="edit-coggins" class="input" type="name"
+                                            <input id="edit-coggins-{{this.id}}" class="input" type="name"
                                                 value="{{ this.lastCoggins }}">
                                         </div>
                                     </div>
@@ -156,7 +181,7 @@
                                     <div class="field">
                                         <label class="label">Last Farrier</label>
                                         <div class="control">
-                                            <input id="edit-farrier" class="input" type="name"
+                                            <input id="edit-farrier-{{this.id}}" class="input" type="name"
                                                 value="{{ this.lastFarrier }}">
                                         </div>
                                     </div>
@@ -164,7 +189,7 @@
                                     <div class="field">
                                         <label class="label">Notes</label>
                                         <div class="control">
-                                            <input id="edit-notes" class="input" type="name" value="{{ this.notes }}">
+                                            <input id="edit-notes-{{this.id}}" class="input" type="name" value="{{ this.Notes }}">
                                         </div>
                                     </div>
 
