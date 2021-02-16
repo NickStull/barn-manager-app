@@ -18,23 +18,66 @@
 </center>
 
 <div class="row">
-<divi id="mainForm" class= "box">
+<div id="mainForm" class= "box">
   <center>
-  <h2>Browse Current Owners</h2>
+  <BR><BR><BR><BR>
   <div class="owner-dropdown dropdown">
-    <button class="dropbtn"> current owners</button>
+    <button class="dropbtn"> Browse Current Owners</button>
       <div id="myDropdown" class="dropdown-content">
         {{#each owners}}
             <a class="select-owner" data-id="{{ this.id }}">
              {{ this.firstName}} {{ this.lastName }}
             </a>
-        {{/each}}
+        {{/each}}</div>
       </div>
-  </div><center><BR>
-  <h2>Add New Owner </h2> 
-        {{!-- <label id="addTitle" class="label">Add an owner</label> --}}
-          <input id="owner-first" class="input" type="text" placeholder="first name" name="firstName">
-          <input id="owner-last"class="input" type="text" placeholder="last name" name="lastName">
-    <button id="addbut" class="button is-primary add" type="submit">Add owner</button>
-  </form>
-</center>
+
+       <p><a id="addbut" class = "button is-primary modal-button" data-target = "#modal">Add New Owner</a></p>
+
+<div class = "modalcontainer"> 
+    <section class = "section">
+        <div id = "modal" class = "modal">
+            <div class = "modal-background"></div>
+            <div class = "modal-card">
+                <header class = "modal-card-head">
+                    <p class = "modal-card-title">Owner Information</p>
+                    <button class = "delete" aria-label = "close"></button>
+                </header>
+                <section class = "modal-card-body">
+                    <div class = "content">
+                        <div class="field">
+                            <label id="addTitle" class="label"></label>
+                            <label class="label">First Name</label>
+                            <div class="control">
+                                <input id="horse-name" class="input" type="name" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Last Name</label>
+                            <div class="control">
+                                <input id="horse-age"class="input" type="name" placeholder="">
+                            </div>
+                        </div>
+                         <footer class="modal-card-foot">
+                    <button id="modBut" class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
+                    <button id="modBut" class="button">Cancel</button></footer> 
+                    
+                           </div> 
+        </div> 
+    </div>    
+</section>
+                
+   <script>
+         $(".modal-button").click(function() {
+            var target = $(this).data("target");
+            $("html").addClass("is-clipped");
+            $(target).addClass("is-active");
+         });
+         
+         $(".delete").click(function() {
+            $("owner.handlebars").removeClass("is-clipped");
+            $(this).parent().removeClass("is-active");
+         });
+      </script>
+
+</div></div>

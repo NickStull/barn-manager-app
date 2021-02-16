@@ -1,11 +1,11 @@
 #mainForm{
-    width: 80%;
+    width: 50%;
     background-color:lightgray;
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    background: rgba(208, 200, 204, 0.5);
     margin-top: 20px;
-    margin-left: 10%;
-    height:300px;
-    
+    margin-left: 25%;
+    height:150px;
 }
 h2{
     font-size: 30px;
@@ -93,11 +93,13 @@ th, td {
       font-size: 25px;
       font-weight: bold;
       color: black;
-      font-family: 'Quicksand', sans-serif;}
-
+      font-family: 'Quicksand', sans-serif;
+      
+  }
   a.modal-button{
-    background-color: indigo;
-     float: right;
+    background-color:black;
+    color:white;
+     float: right; 
      margin-top: -60px;
   }
 
@@ -108,14 +110,19 @@ th, td {
 }
 
 .dropbtn{
-    background-color: gray;
+    margin-top: -60px;
+    float: left; 
+    background-color:black;
     border-radius: 8px;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    font-family: 'Quicksand', sans-serif;}
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px;
+}
 
 *{
 	padding: 0;
@@ -166,9 +173,19 @@ span{
 }  
 
 
+
 #addbut, #new-horse-but{
     background-color:black;
-}
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px};
+
 
 .table{
     background: rgba(255, 255, 255, .7);
@@ -178,6 +195,22 @@ span{
     border: 2px, thin, black;
 }
 
+#modBut{
+    background-color:black;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px};
+
+
+
+
 /* #edit-horse-modal {
     opacity: 1;
 } */
+
