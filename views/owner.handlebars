@@ -1,18 +1,19 @@
 <BR>
-<div id="mainTitle">
-    <div class="toptitle">
-        <center>
-            <span>O</span>
-            <span>W</span>
-            <span>N</span>
-            <span>E</span>
-            <span>R</span>
-            <span></span>
-            <span>I</span>
-            <span>N</span>
-            <span>F</span>
-            <span>O</span>
-    </div>
+<div class="toptitle">
+  <center>
+    <span>H</span>
+    <span>O</span>
+    <span>R</span>
+    <span>S</span>
+    <span>E</span>
+    <span></span>
+    <span>M</span>
+    <span>A</span>
+    <span>N</span>
+    <span>A</span>
+    <span>G</span>
+    <span>E</span>
+    <span>R</span>
 </div>
 
 <a href="/api/logout"><button>Log Out</button></a>
@@ -21,8 +22,16 @@
 
 <button id="new-horse-but" class="button is-primary modal-button" data-target="#modal">Add a Horse</button>
 
-<div id="ownerContainer" class="table-container">
+<center>
+  <u> <h3>Owner Profile</h3></u> 
+<h2> {{ owner.firstName }} {{ owner.lastName }}</h2>
+</center>
+<center>
+<button id="new-horse-but" class="button is-primary modal-button" data-target="#modal">Add New Horse</button>
+<BR>
+<div id="ownerContainer">
     <table class="table">
+        <BR>
         <thead>
             <tr id=ownersLabel>
                 <th>Name</th>
@@ -57,7 +66,7 @@
             </tr>
             <tr>
                 <td>
-                    <button class="button is-primary modal-button edit-horse-but" data-target="#modal" data-id="{{ this.id }}">Edit {{ this.name }}</button>
+                    <button id="edithorse" class="button is-primary modal-button edit-horse-but" data-target="#modal" data-id="{{ this.id }}">Edit {{ this.name }}</button>
                     <div id="edit-horse-{{ this.id }}" class="modal edit-horse-modal">
                         <div class="modal-background"></div>
                         <div class="modal-card">
@@ -94,7 +103,7 @@
                                     <div class="field">
                                         <label class="label">Flakes a.m.</label>
                                         <div class="control">
-                                            <input id="edit-lakes-am" class="input" type="name"
+                                            <input id="edit-flakes-am" class="input" type="name"
                                                 value="{{ this.amFlakes }}">
                                         </div>
                                     </div>
@@ -159,7 +168,7 @@
 
                             <footer class="modal-card-foot">
                                 <button class="button is-success edit-horse" type="submit"
-                                    data-id="{{ owner.id }}">Save</button>
+                                    data-id="{{ this.id }}">Save</button>
                                 <button id="btnClose" class="button close-modal">Cancel</button>
                             </footer>
 
@@ -171,17 +180,18 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastDewormer">Set Today</button></td>
-                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastVaccination">Set Today</button></td>
-                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastCoggins">Set Today</button></td>
-                <td><button class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Set Today</button></td>
+                
+                <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastDewormer">Set to Today</button></td>
+                <td><button id="settoday"  class="setDate" data-id="{{ this.id }}" data-update="lastVaccination">Set to Today</button></td>
+                <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastCoggins">Set to Today</button></td>
+                <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Set to Today</button></td>
                 <td></td>
             </tr>
             {{/each}}
         </tbody>
     </table>
 </div>
-
+</center>
 {{!-- Add a Horse modal code --}}
 <div id="new-horse-modal" class="modal">
     <div class="modal-background"></div>
