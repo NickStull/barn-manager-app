@@ -16,11 +16,8 @@
     <span>R</span>
 </div>
 
-<a href="/api/logout"><button>Log Out</button></a>
+<a href="/api/logout"><button id="logoutbut">Log Out</button></a>
 
-{{!-- <h2> {{ owner.firstName }} {{ owner.lastName }}</h2>
-
-<button id="new-horse-but" class="button is-primary modal-button" data-target="#modal">Add a Horse</button> --}}
 
 <center>
   <u> <h3>Owner Profile</h3></u> 
@@ -28,7 +25,7 @@
 <BR>
 </center>
 <center>
-<button id="new-horse-but" class="button is-primary modal-button" data-target="#modal">Add New Horse</button>
+<button id="new-horse-but" class="button modal-button new-horse-but"  data-target="#modal">Add New Horse</button>
 <BR>
 <div id="ownerContainer">
     <table class="table">
@@ -199,7 +196,7 @@
     <div class="modal-card">
         <header class="modal-card-head">
             <p class="modal-card-title">Horse Information</p>
-            <button class="delete close-modal" aria-label="close"></button>
+            <button id="modBut" class="delete close-modal" aria-label="close"></button>
         </header>
 
         <section class="modal-card-body">
@@ -236,7 +233,7 @@
         </section>
 
         <footer class="modal-card-foot">
-            <button class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
+            <button id="modBut" class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
             <button id="btnClose" class="button close-modal">Cancel</button>
         </footer>
 
