@@ -55,8 +55,8 @@
             </tr>
             <tr>
                 <td>
-                    <button id="edit-horse-but" class="button is-primary modal-button" data-target="#modal">Edit {{ this.name }}</button>
-                    <div id="edit-horse-modal" class="modal">
+                    <button class="button is-primary modal-button edit-horse-but" data-target="#modal" data-id="{{ this.id }}">Edit {{ this.name }}</button>
+                    <div id="edit-horse-{{ this.id }}" class="modal edit-horse-modal">
                         <div class="modal-background"></div>
                         <div class="modal-card">
                             <header class="modal-card-head">
