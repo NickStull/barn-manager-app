@@ -112,6 +112,7 @@ $(function() {
 
     $(".edit-horse").click(function(){
       let id = $(this).data("id");
+      console.log(id);
       let editHorse = {
         horseName: $("#edit-name").val().trim(),
         horseAge: $("#edit-age").val().trim(),
@@ -129,7 +130,7 @@ $(function() {
         type: "PUT",
         data: editHorse
       }).then(function(response){
-        location.reload();
+        // location.reload();
       })
     })
 

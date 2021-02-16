@@ -125,7 +125,7 @@ router.put("/horses/:id", (req, res) => {
 });
 
 router.put("/edit-horses/:id", (req, res) => {
-    console.log("testing attention please");
+    console.log(req.body);
     db.Horse.update(
         {
             name: req.body.horseName,
