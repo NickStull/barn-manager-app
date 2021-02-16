@@ -7,6 +7,21 @@
     /* margin-left: 25%; */
     height:200px;
 }
+
+.divided {
+    display: flex;
+    align-items: center;
+  }
+  
+  .divider {
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    margin: 5px
+  }
+
+spantwo{
+  content: "\2713";
+}
 #logoutbut{
     margin-top: -100px; 
    margin-right:15px;
