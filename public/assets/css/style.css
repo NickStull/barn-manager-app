@@ -218,7 +218,7 @@ width: 300px;
 height:50px};
 
 
-table{
+.table-container{
     background: rgba(255, 255, 255, 1) !important;
     /* opacity: .7; */
     color:black;
@@ -238,11 +238,3 @@ table{
     width: 300px;
     height:50px;
 }
-
-
-
-
-/* #edit-horse-modal {
-    opacity: 1;
-} */
-
