@@ -7,7 +7,23 @@
     /* margin-left: 25%; */
     height:200px;
 }
+#logoutbut{
+    margin-top: -100px; 
+   margin-right:15px;
+    float:right;
+    background-color:black;
+    border-radius: 8px;
+    color: white; 
+     /* padding: 16px; */
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 100px;
+height:20px;
 
+
+}
 .container-signup,.container-login
 {
     width: 40%;
@@ -66,10 +82,24 @@ th, td {
     padding: 5px;
     text-align: center;
 }
+.new-horse-but{
+    
+    margin-top: -20px;
+    background-color:black;
+    border-radius: 8px;
+    color: white; 
+     padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 150px;
+height:30px;
+  }
 
 
  /* ON HOVER COLOR FOR ALL BUTTONS */
-  .dropbtn:hover,#addbut:hover, #new-horse-but:hover, .dropbtn:focus, 
+  .dropbtn:hover,#addbut:hover,#logoutbut:hover, #new-horse-but:hover, .dropbtn:focus, 
   #signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,#modBut:hover, #btnClose:hover {
     background-color:#669966;
   }
@@ -148,20 +178,6 @@ height:50px;
 width: 300px;
 height:50px};
 
-#new-horse-but{
-    
-    margin-top: -20px;
-    background-color:black;
-    border-radius: 8px;
-    color: white;
-    /* padding: 16px; */
-    font-size: 10px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-width: 120px;
-height:30px;
-  }
 
 #owner-first,
 #owner-last,.form-control{
