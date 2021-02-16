@@ -147,7 +147,6 @@ router.put("/edit-horses/:id", (req, res) => {
 });
 
 router.put("/edit-horse-note/:id", (req, res) => {
-    console.log(req.body);
     db.Horse.update(
         {
             Notes: req.body.note
