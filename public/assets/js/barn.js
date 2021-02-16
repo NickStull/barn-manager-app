@@ -95,12 +95,19 @@ $(function() {
       $("html").addClass("is-clipped");
       $("#edit-horse-" + id).addClass("is-active");
    });
+
+    $(".edit-note-but").click(function(){
+      let id = $(this).data("id");
+      $("html").addClass("is-clipped");
+      $("#edit-note-" + id).addClass("is-active");
+    })
     
     $(".close-modal").click(function() {
        $("html").removeClass("is-clipped");
        $("#new-horse-modal").removeClass("is-active");
        $(".edit-horse-modal").removeClass("is-active");
        $("#new-owner-modal").removeClass("is-active");
+       $(".edit-note-modal").removeClass("is-active");
     });
 
     $(".edit-horse").click(function(){

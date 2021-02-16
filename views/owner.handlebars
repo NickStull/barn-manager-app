@@ -61,7 +61,34 @@
                 <td> {{ this.lastVaccination }} </td>
                 <td> {{ this.lastCoggins }} </td>
                 <td> {{ this.lastFarrier }} </td>
-                <td> {{ this.Notes }} </td>
+                <td>
+                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Edit Note</button>
+                    <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Edit Info</p>
+                                <button class="delete close-modal" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <div class="content">
+                                    <div class="field">
+                                        <label class="label">Notes</label>
+                                        <div class="control">
+                                            <input id="edit-notes" class="input" type="name" value="{{ this.notes }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <footer class="modal-card-foot">
+                                <button class="button is-success edit-horse" type="submit"
+                                    data-id="{{ this.id }}">Save</button>
+                                <button id="btnClose" class="button close-modal">Cancel</button>
+                            </footer>
+                        </div>
+                    </div>
+                </td>
+                </td>
 
             </tr>
             <tr>
@@ -185,6 +212,7 @@
                 <td><button id="settoday"  class="setDate" data-id="{{ this.id }}" data-update="lastVaccination">Set to Today</button></td>
                 <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastCoggins">Set to Today</button></td>
                 <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Set to Today</button></td>
+                
                 <td></td>
             </tr>
             {{/each}}
