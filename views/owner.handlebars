@@ -15,7 +15,7 @@
     </div>
 </div>
 <section class = "section">
-    <div class = "container"> 
+    <div class = "modalcontainer"> 
         <p><a id="addbut" class = "button is-primary modal-button" data-target = "#modal">Add a Horse</a></p>
     
         <div id = "modal" class = "modal">
@@ -60,8 +60,8 @@
                 </section>
 
                 <footer class="modal-card-foot">
-                    <button class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
-                    <button id="btnClose" class="button">Cancel</button>
+                    <button id="modBut" class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
+                    <button id="modBut" class="button">Cancel</button>
                 </footer> 
 
             </div> {{!-- end modal-card --}}
