@@ -18,10 +18,17 @@
 
 <a href="/api/logout"><button id="logoutbut">Log Out</button></a>
 
-
+<p class="divided">
+ 
+  <span class="divider"></span>
+  
+</p>
 <center>
-  <u> <h3>Owner Profile</h3></u> 
-<h2> {{ owner.firstName }} {{ owner.lastName }}</h2>
+  Owner Profile For
+<h2>{{ owner.firstName }} {{ owner.lastName }}</h2>
+
+
+
 <BR>
 </center>
 <center>
@@ -204,11 +211,18 @@
                 <td></td>
                 <td></td>
                 
+<<<<<<< HEAD
                 <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastDewormer">Set to Today</button></td>
                 <td><button id="settoday"  class="setDate" data-id="{{ this.id }}" data-update="lastVaccination">Set to Today</button></td>
                 <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastCoggins">Set to Today</button></td>
                 <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Set to Today</button></td>
                 
+=======
+                <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastDewormer">Updated Today <spantwo>&#10003;</span> </button></td>
+                <td><button id="settoday"  class="setDate" data-id="{{ this.id }}" data-update="lastVaccination">Updated Today <spantwo>&#10003;</span></button></td>
+                <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastCoggins">Updated Today <spantwo>&#10003;</span></button></td>
+                <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Updated Today <spantwo>&#10003;</span></button></td>
+>>>>>>> origin
                 <td></td>
             </tr>
             {{/each}}
