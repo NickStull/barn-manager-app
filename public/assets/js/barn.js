@@ -77,5 +77,22 @@ $(function() {
         location.reload();
       });
     });
+
+    $("#new-horse-but").click(function() {
+       $("html").addClass("is-clipped");
+       $("#new-horse-modal").addClass("is-active");
+    });
+
+    $("#edit-horse-but").click(function() {
+      $("html").addClass("is-clipped");
+      $("#edit-horse-modal").addClass("is-active");
+   });
+    
+    $(".close-modal").click(function() {
+       $("html").removeClass("is-clipped");
+       $("#new-horse-modal").removeClass("is-active");
+       $("#edit-horse-modal").removeClass("is-active");
+    });
+
 })
 
