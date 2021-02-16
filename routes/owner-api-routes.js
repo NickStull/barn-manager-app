@@ -16,10 +16,12 @@ let db = require("../models");
 //     })
 // })
 
-router.post("/owners", (req, res) => {
+router.post("/signup", (req, res) => {
     db.Owner.create(req.body).then(response => {
-        res.send("Owner Added");
-    });
+        console.log("Owner Added");
+    }).then(function() {
+        res.redirect(307, "/api/login");
+      })
 })
 
 router.post("/owners/:id", (req, res) => {
