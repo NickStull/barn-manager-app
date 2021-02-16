@@ -1,9 +1,10 @@
 $(function() {
-    $(".create-form").on("submit", function(event) {
+    $(".create-form").on("click", function(event) {
       event.preventDefault();
+      console.log("clicked");
       let newOwner = {
-        firstName: $("#owner-first").val().trim(),
-        lastName: $("#owner-last").val().trim()
+        firstName: $("#ownerFirst").val().trim(),
+        lastName: $("#ownerLast").val().trim()
       }
       $.ajax("/api/owners", {
         type: "POST",
@@ -78,6 +79,12 @@ $(function() {
       });
     });
 
+    $(".new-owner-but").click(function() {
+      console.log("clicked add")
+      $("html").addClass("is-clipped");
+      $("#new-owner-modal").addClass("is-active");
+   });
+
     $("#new-horse-but").click(function() {
        $("html").addClass("is-clipped");
        $("#new-horse-modal").addClass("is-active");
@@ -93,6 +100,7 @@ $(function() {
        $("html").removeClass("is-clipped");
        $("#new-horse-modal").removeClass("is-active");
        $(".edit-horse-modal").removeClass("is-active");
+       $("#new-owner-modal").removeClass("is-active");
     });
 
 })
