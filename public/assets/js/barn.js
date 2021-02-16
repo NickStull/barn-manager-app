@@ -103,5 +103,27 @@ $(function() {
        $("#new-owner-modal").removeClass("is-active");
     });
 
+    $(".edit-horse").click(function(){
+      let id = $(this).data("id");
+      console.log(id);
+      let editHorse = {
+        horseName: $("#edit-name").val().trim(),
+        horseAge: $("#edit-age").val().trim(),
+        horseBreed: $("#edit-breed").val().trim(),
+        flakesAM: $("#edit-flakes-am").val().trim(),
+        flakesPM: $("#edit-flakes-pm").val().trim(),
+        grainServing: $("#edit-grain-serving").val().trim(),
+        lastDewormed: $("#edit-dewormed").val().trim(),
+        lastVaccinated: $("#edit-vaccination").val().trim(),
+        lastCoggins: $("#edit-coggins").val().trim(),
+        lastFarrier: $("#edit-farrier").val().trim(),
+        editNotes: $("#edit-notes").val().trim()
+      }
+      $.ajax("/api/edit-horses/" + id, {
+        type: "PUT",
+        data: editHorse
+      }).then(function(response){
+        location.reload();
+      })
+    })
 })
-
