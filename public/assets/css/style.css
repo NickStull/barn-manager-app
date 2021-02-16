@@ -1,11 +1,11 @@
 #mainForm{
-    width: 80%;
+    width: 50%;
     background-color:lightgray;
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    background: rgba(208, 200, 204, 0.5);
     margin-top: 20px;
-    margin-left: 10%;
-    height:300px;
-    
+    margin-left: 25%;
+    height:200px;
 }
 h2{
     font-size: 30px;
@@ -53,7 +53,7 @@ th, td {
 
 
   /* Dropdown button on hover & focus */
-  .dropbtn:hover,#addbut:hover, .dropbtn:focus {
+  .dropbtn:hover,#addbut:hover, #add-horse-but:hover, .dropbtn:focus {
     background-color:#008B8B;
   }
   
@@ -93,13 +93,23 @@ th, td {
       font-size: 25px;
       font-weight: bold;
       color: black;
-      font-family: 'Quicksand', sans-serif;}
-
-  a.modal-button{
-    background-color: indigo;
-     float: right;
-     margin-top: -60px;
+      font-family: 'Quicksand', sans-serif;
+      
   }
+  /* a.modal-button{
+    margin-top: -60px;
+    float: left; 
+    background-color:black;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px;
+  } */
 
 #owner-first,
 #owner-last{
@@ -108,14 +118,41 @@ th, td {
 }
 
 .dropbtn{
-    background-color: gray;
+    margin-top: -60px;
+    float: left; 
+    background-color:black;
     border-radius: 8px;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    font-family: 'Quicksand', sans-serif;}
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px;
+}
+#new-horse-but{
+    margin-top: -60px;
+    float: right; 
+    background-color:black;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px;
+  }
+
+#owner-first,
+#owner-last{
+    font-family: 'Quicksand', sans-serif;
+   width: 30%;
+}
+
+
 
 *{
 	padding: 0;
@@ -166,13 +203,44 @@ span{
 }  
 
 
-#addbut{
+
+#addbut, #new-horse-but{
     background-color:black;
-}
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px};
+
 
 .table{
-    opacity: .7;
+    background: rgba(255, 255, 255, .7);
+    /* opacity: .7; */
     color:black;
     font-weight: bolder;
     border: 2px, thin, black;
 }
+
+#modBut{
+    background-color:black;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px};
+
+
+
+
+/* #edit-horse-modal {
+    opacity: 1;
+} */
+
