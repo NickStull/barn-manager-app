@@ -112,7 +112,6 @@ $(function() {
 
     $(".edit-horse").click(function(){
       let id = $(this).data("id");
-      console.log(id);
       let editHorse = {
         horseName: $("#edit-name").val().trim(),
         horseAge: $("#edit-age").val().trim(),
@@ -131,6 +130,17 @@ $(function() {
         data: editHorse
       }).then(function(response){
         location.reload();
+      })
+    })
+
+    $(".edit-horse-note").click(function(){
+      let id = $(this).data("id");
+      let note = $("#edit-notes-solo").val().trim();
+      $.ajax("/api/edit-horse-note/" + id,{
+        type: "PUT",
+        data: note
+      }).then(function(response){
+        // location.reload();
       })
     })
 })
