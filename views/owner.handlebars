@@ -1,107 +1,44 @@
 <BR>
 <div id="mainTitle">
     <div class="toptitle">
-    <center>
-        <span>O</span>
-        <span>W</span>
-        <span>N</span>
-        <span>E</span>
-        <span>R</span>
-        <span></span>
-        <span>I</span>
-    <span>N</span>
-        <span>F</span>
-    <span>O</span>
+        <center>
+            <span>O</span>
+            <span>W</span>
+            <span>N</span>
+            <span>E</span>
+            <span>R</span>
+            <span></span>
+            <span>I</span>
+            <span>N</span>
+            <span>F</span>
+            <span>O</span>
     </div>
 </div>
-<section class = "section">
-    <div class = "modalcontainer"> 
-        <p><a id="addbut" class = "button is-primary modal-button" data-target = "#modal">Add a Horse</a></p>
-    
-        <div id = "modal" class = "modal">
-            <div class = "modal-background"></div>
-            <div class = "modal-card">
-                <header class = "modal-card-head">
-                    <p class = "modal-card-title">Horse Information</p>
-                    <button class = "delete" aria-label = "close"></button>
-                </header>
-        
-                <section class = "modal-card-body">
-                    <div class = "content">
-                        <div class="field">
-                            <label id="addTitle" class="label"></label>
-                            <label class="label">Name</label>
-                            <div class="control">
-                                <input id="horse-name" class="input" type="name" placeholder="">
-                            </div>
-                        </div>
 
-                        <div class="field">
-                            <label class="label">Age</label>
-                            <div class="control">
-                                <input id="horse-age"class="input" type="name" placeholder="">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">Breed</label>
-                            <div class="control">
-                                <input id="horse-breed"class="input" type="name" placeholder="">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">Notes</label>
-                            <div class="control">
-                                <input id="horse-notes"class="input" type="name" placeholder="">
-                            </div>
-                        </div>
-                    </div>     
-                </section>
-
-                <footer class="modal-card-foot">
-                    <button id="modBut" class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
-                    <button id="modBut" class="button">Cancel</button>
-                </footer> 
-
-            </div> {{!-- end modal-card --}}
-        </div> {{!-- end modal --}}
-    </div> {{!-- end container --}}    
-</section>
-      
-      <script>
-         $(".modal-button").click(function() {
-            var target = $(this).data("target");
-            $("html").addClass("is-clipped");
-            $(target).addClass("is-active");
-         });
-         
-         $(".delete").click(function() {
-            $("owner.handlebars").removeClass("is-clipped");
-            $(this).parent().removeClass("is-active");
-         });
-      </script>
 <h2> {{ owner.firstName }} {{ owner.lastName }}</h2>
-<div id= "ownerContainer" class="table-container">
-<table class="table">
-    <thead>
-        <tr id=ownersLabel>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Breed</th>
-            <th>Flakes a.m.</th>
-            <th>Flakes p.m.</th>
-            <th>Grain Serving</th>
-            <th>Last Dewormed</th>
-            <th>Last Vaccination</th>
-            <th>Last Coggins</th>
-            <th>Last Farrier</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    </div>
-    <tbody>
-        {{#each owner.Horses}}
+
+<button id="new-horse-but" class="button is-primary modal-button" data-target="#modal">Add a Horse</button>
+
+<div id="ownerContainer" class="table-container">
+    <table class="table">
+        <thead>
+            <tr id=ownersLabel>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Breed</th>
+                <th>Flakes a.m.</th>
+                <th>Flakes p.m.</th>
+                <th>Grain Serving</th>
+                <th>Last Dewormed</th>
+                <th>Last Vaccination</th>
+                <th>Last Coggins</th>
+                <th>Last Farrier</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each owner.Horses}}
             <tr>
                 <td> {{ this.name }} </td>
                 <td> {{ this.age }} </td>
@@ -114,10 +51,119 @@
                 <td> {{ this.lastCoggins }} </td>
                 <td> {{ this.lastFarrier }} </td>
                 <td> {{ this.Notes }} </td>
-                
+
             </tr>
             <tr>
-                <td><button>Edit Info</button></td>
+                <td>
+                    <button id="edit-horse-but" class="button is-primary modal-button" data-target="#modal">Edit {{ this.name }}</button>
+                    <div id="edit-horse-modal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Edit Info</p>
+                                <button class="delete close-modal" aria-label="close"></button>
+                            </header>
+
+                            <section class="modal-card-body">
+                                <div class="content">
+
+                                    <div class="field">
+                                        <label id="addTitle" class="label"></label>
+                                        <label class="label">Name</label>
+                                        <div class="control">
+                                            <input id="edit-name" class="input" type="name" value="{{ this.name }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Age</label>
+                                        <div class="control">
+                                            <input id="edit-age" class="input" type="name" value="{{ this.age }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Breed</label>
+                                        <div class="control">
+                                            <input id="edit-breed" class="input" type="name" value="{{ this.breed }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Flakes a.m.</label>
+                                        <div class="control">
+                                            <input id="edit-lakes-am" class="input" type="name"
+                                                value="{{ this.amFlakes }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Flakes p.m.</label>
+                                        <div class="control">
+                                            <input id="edit-flakes-pm" class="input" type="name"
+                                                value="{{ this.pmFlakes }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Grain Serving</label>
+                                        <div class="control">
+                                            <input id="edit-grain-serving" class="input" type="name"
+                                                value="{{ this.grainServing }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Last Dewormed</label>
+                                        <div class="control">
+                                            <input id="edit-dewormed" class="input" type="name"
+                                                value="{{ this.lastDewormer }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Last Vaccination</label>
+                                        <div class="control">
+                                            <input id="edit-vaccination" class="input" type="name"
+                                                value="{{ this.lastVaccination }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Last Coggins</label>
+                                        <div class="control">
+                                            <input id="edit-coggins" class="input" type="name"
+                                                value="{{ this.lastCoggins }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Last Farrier</label>
+                                        <div class="control">
+                                            <input id="edit-farrier" class="input" type="name"
+                                                value="{{ this.lastFarrier }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label class="label">Notes</label>
+                                        <div class="control">
+                                            <input id="edit-notes" class="input" type="name" value="{{ this.notes }}">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <footer class="modal-card-foot">
+                                <button class="button is-success edit-horse" type="submit"
+                                    data-id="{{ owner.id }}">Save</button>
+                                <button id="btnClose" class="button close-modal">Cancel</button>
+                            </footer>
+
+                        </div>
+                    </div>
+                </td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -129,24 +175,158 @@
                 <td><button class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Set Today</button></td>
                 <td></td>
             </tr>
-        {{/each}}
-    </tbody>    
-</table>        
-
-{{!-- <h2>Add a horse</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="horse-name">Name:</label>
-    <input type="text" id="horse-name" name="horseName">
-    <label for="owner-last">Last Name:</label>
-    <input type="text" id="owner-last" name="lastName">
-  </div>
-
-  <button class="add" type="submit">Add a horse</button>
-</form> --}}
+            {{/each}}
+        </tbody>
+    </table>
 </div>
 
+{{!-- Add a Horse modal code --}}
+<div id="new-horse-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Horse Information</p>
+            <button class="delete close-modal" aria-label="close"></button>
+        </header>
 
-  </tbody>
-</table>
+        <section class="modal-card-body">
+            <div class="content">
+                <div class="field">
+                    <label id="addTitle" class="label"></label>
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input id="horse-name" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Age</label>
+                    <div class="control">
+                        <input id="horse-age" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Breed</label>
+                    <div class="control">
+                        <input id="horse-breed" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Notes</label>
+                    <div class="control">
+                        <input id="horse-notes" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="modal-card-foot">
+            <button class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
+            <button id="btnClose" class="button close-modal">Cancel</button>
+        </footer>
+
+    </div>
+</div>
+
+{{!-- Edit Horse modal code --}}
+{{!-- <div id="edit-horse-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Edit Info</p>
+            <button class="delete close-modal" aria-label="close"></button>
+        </header>
+
+        <section class="modal-card-body">
+            <div class="content">
+
+                <div class="field">
+                    <label id="addTitle" class="label"></label>
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input id="edit-name" class="input" type="name" placeholder="{{ this.name }}">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Age</label>
+                    <div class="control">
+                        <input id="edit-age" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Breed</label>
+                    <div class="control">
+                        <input id="edit-breed" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Flakes a.m.</label>
+                    <div class="control">
+                        <input id="edit-lakes-am" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Flakes p.m.</label>
+                    <div class="control">
+                        <input id="edit-flakes-pm" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Grain Serving</label>
+                    <div class="control">
+                        <input id="edit-grain-serving" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Last Dewormed</label>
+                    <div class="control">
+                        <input id="edit-dewormed" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Last Vaccination</label>
+                    <div class="control">
+                        <input id="edit-vaccination" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Last Coggins</label>
+                    <div class="control">
+                        <input id="edit-coggins" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Last Farrier</label>
+                    <div class="control">
+                        <input id="edit-farrier" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Notes</label>
+                    <div class="control">
+                        <input id="edit-notes" class="input" type="name" placeholder="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="modal-card-foot">
+            <button class="button is-success edit-horse" type="submit" data-id="{{ owner.id }}">Save</button>
+            <button id="btnClose" class="button close-modal">Cancel</button>
+        </footer>
+
+    </div>
+</div> --}}
