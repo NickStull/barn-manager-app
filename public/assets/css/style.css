@@ -5,7 +5,7 @@
     background: rgba(208, 200, 204, 0.5);
     margin-top: 20px;
     margin-left: 25%;
-    height:150px;
+    height:200px;
 }
 h2{
     font-size: 30px;
@@ -96,12 +96,20 @@ th, td {
       font-family: 'Quicksand', sans-serif;
       
   }
-  a.modal-button{
+  /* a.modal-button{
+    margin-top: -60px;
+    float: left; 
     background-color:black;
-    color:white;
-     float: right; 
-     margin-top: -60px;
-  }
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px;
+  } */
 
 #owner-first,
 #owner-last{
@@ -123,6 +131,28 @@ th, td {
 width: 300px;
 height:50px;
 }
+#new-horse-but{
+    margin-top: -60px;
+    float: right; 
+    background-color:black;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+width: 300px;
+height:50px;
+  }
+
+#owner-first,
+#owner-last{
+    font-family: 'Quicksand', sans-serif;
+   width: 30%;
+}
+
+
 
 *{
 	padding: 0;
