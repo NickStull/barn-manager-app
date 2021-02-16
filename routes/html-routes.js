@@ -2,19 +2,47 @@ const db = require("../models");
 var router = require("express").Router();
 var path = require( 'path');
 
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+const { Router } = require("express");
+
+
 let unpack = (data) => JSON.parse(JSON.stringify(data));
 
 router.get("/", (req, res) => {
-    db.Owner.findAll({
-        include: [db.Horse]
-      }).then(dbOwner => {
-        // console.log(dbOwner);
-        res.render("index", { owners: unpack(dbOwner) })
-    })
+  // If the user already has an account send them to the members page
+
+  if(req.user) {
+      res.redirect(`/owners/${req.user.id}`);
+  }
+
+  res.render("signup");
 })
 
-router.get("/owners/:id", (req, res) => {
-  db.Owner.findOne({
+router.get("/login", function(req, res) {
+  // If the user already has an account send them to the members page
+  if (req.user) {
+    res.redirect("/");
+  }
+  res.render("login");
+});
+
+router.get("/manager", isAuthenticated, function(req, res) {
+  if(req.user.id === 1) {
+    db.Owner.findAll({
+      include: [db.Horse]
+    }).then(dbOwner => {
+      // console.log(dbOwner);
+      res.render("index", { owners: unpack(dbOwner) })
+    })
+  } else {
+    res.redirect('/');
+  }
+  
+});
+
+router.get("/owners/:id", isAuthenticated, (req, res) => {
+  if(req.user.id === req.params.id || req.user.id === 1) {
+    db.Owner.findOne({
       where: {
         id: req.params.id
       },
@@ -29,6 +57,24 @@ router.get("/owners/:id", (req, res) => {
       console.log(unpack(response));
       res.render("owner", { owner: unpack(response)});
   })
+  } else {
+    db.Owner.findOne({
+      where: {
+        id: req.user.id
+      },
+      include: {
+          model: db.Horse,
+          required: false,
+          where: {
+              OwnerId: req.user.id
+          }
+      }
+  }).then(response => {
+      console.log(unpack(response));
+      res.render("owner", { owner: unpack(response)});
+  })
+  }
+  
 })
 
 module.exports = router;
