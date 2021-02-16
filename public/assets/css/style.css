@@ -159,6 +159,7 @@ height:50px;
 	margin: 0;
 	box-sizing: border-box;
 }
+
 .toptitle{
    
 	font-family: 'Quicksand', sans-serif;
@@ -217,8 +218,8 @@ width: 300px;
 height:50px};
 
 
-.table{
-    background: rgba(255, 255, 255, .7);
+.table-container{
+    background: rgba(255, 255, 255, 1) !important;
     /* opacity: .7; */
     color:black;
     font-weight: bolder;
@@ -234,13 +235,6 @@ height:50px};
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-width: 300px;
-height:50px};
-
-
-
-
-/* #edit-horse-modal {
-    opacity: 1;
-} */
-
+    width: 300px;
+    height:50px;
+}

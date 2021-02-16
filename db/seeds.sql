@@ -1,9 +1,9 @@
 USE barn_db;
 
-INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Stephanie', 'Stull', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
-INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Nancy', 'Klaus', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
-INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Mary Jo', 'McMan', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
-INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Lynn', 'Gunderson', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
+-- INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Stephanie', 'Stull', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
+-- INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Nancy', 'Klaus', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
+-- INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Mary Jo', 'McMan', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
+-- INSERT INTO owners (firstName, lastName, createdAt, updatedAt) VALUES ('Lynn', 'Gunderson', '2021-02-13 04:54:57', '2021-02-13 04:54:57');
 
 INSERT INTO horses (name, age, breed, amFlakes, pmFlakes, grainServing, lastDewormer, lastVaccination, lastCoggins, lastFarrier, createdAt, updatedAt, OwnerId) VALUES ('Pyro', 13, 'Paint', 2, 2, 2, '2020-10-25', '2020-04-15', '2020-05-02', '2021-01-07', '2021-02-13 04:54:57', '2021-02-13 04:54:57', 1);
 INSERT INTO horses (name, age, breed, amFlakes, pmFlakes, grainServing, lastDewormer, lastVaccination, lastCoggins, lastFarrier, createdAt, updatedAt, OwnerId) VALUES ('Hershey', 22, 'Quarter Horse', 2, 2, 0.5, '2020-11-05', '2020-05-17', '2020-09-12', '2021-02-09', '2021-02-13 04:54:57', '2021-02-13 04:54:57', 2);

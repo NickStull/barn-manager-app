@@ -28,8 +28,12 @@ $(document).ready(function() {
       email: email,
       password: password
     })
-      .then(function() {
-        window.location.replace("/members");
+      .then(function(response) {
+        if(response.id === 1) {
+          window.location.replace(`/manager`);
+        } else {
+          window.location.replace(`/owners/${response.id}`);
+        }
         // If there's an error, log the error
       })
       .catch(function(err) {
