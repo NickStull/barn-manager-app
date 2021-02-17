@@ -365,7 +365,7 @@ span{
 }   */
 
 
-#addbut{
+#addbut, #cancelbut{
     
     background-color:black;
     border-radius: 8px;

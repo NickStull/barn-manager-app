@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".add-owner").on("submit", function(event) {
+    $(".add-owner").on("click", function(event) {
       event.preventDefault();
       let newOwner = {
         firstName: $("#ownerFirst").val().trim(),
@@ -7,31 +7,32 @@ $(document).ready(function() {
         email: $("#ownerEmail").val().trim(),
         password: $("#ownerPass").val().trim()
       };
-      console.log("-----------------------in the create.form ------------------------");
       console.log(newOwner);
       if (!newOwner.email || !newOwner.password) {
         return;
       }
-      addOwner(newOwner);
+      // addOwner(newOwner);
       $("#ownerEmail").val("");
       $("#ownerPass").val("");
-      // $.ajax("/api/owners", {
-      //   type: "POST",
-      //   data: newOwner
-      // }).then(function(response){
-      //   location.reload();
-      // });
+      $.ajax("/api/owners", {
+        type: "POST",
+        data: newOwner
+      }).then(function(data){
+        console.log("-------------gimmie that data---------------");
+        console.log(data);
+        // window.location.assign("/owners/" + id);
+      });
     });
 
-    function addOwner(owner) {
-      console.log("------------------ADD OWNER-----------------");
-      // $.post("/api/owners", {
+    // function addOwner(owner) {
+    //   console.log("------------------ADD OWNER-----------------");
+    //   // $.post("/api/owners", {
       //   type: "POST",
       //   data: owner
       // }).then(function(data) {
       //   window.location.assign("/owners/" + id);
       // })
-    }
+    // }
 
     $(".select-owner").on("click", function(event) {
       var id = $(this).data("id");

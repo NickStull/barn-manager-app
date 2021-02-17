@@ -23,11 +23,13 @@ router.post("/signup", (req, res) => {
 router.post("/owners", (req, res) => {
     console.log("----------------post router------------------");
     console.log(req.body);
-    // db.Owner.create(req.body).then(response => {
-    //     console.log("Owner Added");
-    // }).then(function() {
-    //     res.redirect(307, "/api/login");
-    // });
+    db.Owner.create(req.body).then(response => {
+        console.log("Owner Added");
+    }).then(function() {
+        console.log("-----------data received------------"); 
+        console.log(res);
+        res.redirect(307, "/api/login");
+    });
 })
 
 router.post("/owners/:id", (req, res) => {
