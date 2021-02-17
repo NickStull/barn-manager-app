@@ -18,8 +18,11 @@
 
 <a href="/api/logout"><button id="logoutbut">Log Out</button></a>
 
+{{#if user.isAdmin}}
+    <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
+{{/if}}
+
 <p class="divided">
- 
   <span class="divider"></span>
   
 </p>
@@ -50,8 +53,11 @@
                 <th>Last Coggins</th>
                 <th>Last Farrier</th>
                 <th>Notes</th>
-            </tr>
+             
+             
+        </tr>
         </thead>
+      
 
         <tbody>
             {{#each owner.Horses}}
@@ -67,9 +73,9 @@
                 <td> {{ this.lastCoggins }} </td>
                 <td> {{ this.lastFarrier }} </td>
                 <td>
-                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">View/Edit Note</button>
+                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Add/Edit Note</button>
                     <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
-                        
+                       <
                         <div class="modal-background"></div>
                         <div class="modal-card">
                             
@@ -99,6 +105,7 @@
                     </div>
                 </td>
             </tr>
+            </td> 
             <tr>
                 <td>
                     <button id="edithorse" class="button is-primary modal-button edit-horse-but" data-target="#modal" data-id="{{ this.id }}">Edit {{ this.name }}</button>
@@ -207,16 +214,17 @@
                                 <button id="modBut" class="button close-modal">Cancel</button>
                             </footer>
 
-                        </div>
-                    </div>
+                        </div> 
+                     </div>
                 </td>
-                <td></td>
+                <td>             
+</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 
-                <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastDewormer">Updated Today <spantwo>&#10003;</span> </button></td>
+               <td> <button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastDewormer">Updated Today <spantwo>&#10003;</span> </button></td>
                 <td><button id="settoday"  class="setDate" data-id="{{ this.id }}" data-update="lastVaccination">Updated Today <spantwo>&#10003;</span></button></td>
                 <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastCoggins">Updated Today <spantwo>&#10003;</span></button></td>
                 <td><button  id="settoday" class="setDate" data-id="{{ this.id }}" data-update="lastFarrier">Updated Today <spantwo>&#10003;</span></button></td>
@@ -276,3 +284,4 @@
 
     </div>
 </div>
+ 
