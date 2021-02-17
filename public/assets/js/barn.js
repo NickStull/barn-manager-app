@@ -1,20 +1,37 @@
-$(function() {
-    $(".create-form").on("click", function(event) {
+$(document).ready(function() {
+    $(".add-owner").on("submit", function(event) {
       event.preventDefault();
-      console.log("clicked");
       let newOwner = {
         firstName: $("#ownerFirst").val().trim(),
         lastName: $("#ownerLast").val().trim(),
         email: $("#ownerEmail").val().trim(),
         password: $("#ownerPass").val().trim()
+      };
+      console.log("-----------------------in the create.form ------------------------");
+      console.log(newOwner);
+      if (!newOwner.email || !newOwner.password) {
+        return;
       }
-      $.ajax("/api/owners", {
-        type: "POST",
-        data: newOwner
-      }).then(function(response){
-        location.reload();
-      });
+      addOwner(newOwner);
+      $("#ownerEmail").val("");
+      $("#ownerPass").val("");
+      // $.ajax("/api/owners", {
+      //   type: "POST",
+      //   data: newOwner
+      // }).then(function(response){
+      //   location.reload();
+      // });
     });
+
+    function addOwner(owner) {
+      console.log("------------------ADD OWNER-----------------");
+      // $.post("/api/owners", {
+      //   type: "POST",
+      //   data: owner
+      // }).then(function(data) {
+      //   window.location.assign("/owners/" + id);
+      // })
+    }
 
     $(".select-owner").on("click", function(event) {
       var id = $(this).data("id");
