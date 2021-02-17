@@ -1,13 +1,13 @@
+
+/* main div on index page */  
 #mainForm{
     width: 50%;
     background-color:lightgray;
-    /* opacity: 0.5; */
     background: rgba(208, 200, 204, 0.5);
-    margin-top: 20px;
-    /* margin-left: 25%; */
-    height:200px;
+    margin-top: 5%;
+    
 }
-
+/* sytling for thin line under headers */
 .divided {
     display: flex;
     align-items: center;
@@ -16,26 +16,28 @@
   .divider {
     flex-grow: 1;
     border-bottom: 1px solid black;
-    margin: 5px
+    margin: 0%
   }
 
+/* checksmarks on set today buttons */
 spantwo{
   content: "\2713";
 }
+
+
 #logoutbut{
-    margin-top: -100px; 
-   margin-right:15px;
+ margin-top:-7%;
     float:right;
+    margin-right:1%;
     background-color:black;
     border-radius: 8px;
     color: white; 
-     /* padding: 16px; */
     font-size: 12px;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-width: 100px;
-height:20px;
+    width:55px;
+    height:20px; 
 
 
 }
@@ -134,9 +136,14 @@ k{
     color: black;
     font-family: 'Quicksand', sans-serif;
 }
-.field,.table{
+.field{
     padding-left: 20px;
     /* background-color:lightgray; */
+    margin-top: 0px;
+    background: rgba(208, 200, 204, 0.5);
+
+}#ownerContainer{
+    width:70%;
     margin-top: 0px;
     background: rgba(208, 200, 204, 0.5);
 }
@@ -150,17 +157,23 @@ k{
 
 }
 
-body{
-        background-image: url("horsecopy.jpg"); /* The image used */
-        background-color: white; /* Used if the image is unavailable */
-        height: 120vh; /* You must set a specified height */
-     color: black;
-        background-position: left-bottom; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
-       
 
+body{
    
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("horsecopy.jpg"); /* The image used */
+    background-color: white; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+ color: black;
+    background-position: right bottom;
+    
+     /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    
+
+
 
 }
 
@@ -278,7 +291,7 @@ height:50px};
 	background: white;
 }
 span{
-	margin: 0 15px;
+  
 	line-height: .7;
 	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
 	animation: span 3s ease-in infinite alternate;
@@ -306,14 +319,22 @@ span{
 	animation: letter 3s ease-in-out infinite alternate;
 }
 @keyframes span {
-	0%,30%{ margin: 0 15px; }
-	70%,100%{ margin: 0 5px; }
+	0%,30%{ margin:0n .5%; }
+	70%,100%{margin: 0 .5%;}
 }
  @keyframes letter {
 	0%,30%{ width: 27px; }
 	70%,100%{ width: 30vw; } 
 }  
 
+/* @keyframes span {
+	0%,30%{ margin: 0 15px; }
+	70%,100%{ margin: 0 5px; }
+}
+ @keyframes letter {
+	0%,30%{ width: 27px; }
+	70%,100%{ width: 30vw; } 
+}   */
 
 
 #addbut{
@@ -383,3 +404,4 @@ label{
 {
     margin-bottom:2%;
 }
+
