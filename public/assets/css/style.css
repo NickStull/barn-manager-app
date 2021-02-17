@@ -1,10 +1,11 @@
 
 /* main div on index page */  
 #mainForm{
-    width: 50%;
+    width: 400px;
     background-color:lightgray;
     background: rgba(208, 200, 204, 0.5);
-    margin-top: 5%;
+    height:200px;
+    margin-top:15px;
     
 }
 /* sytling for thin line under headers */
@@ -32,15 +33,41 @@ spantwo{
     background-color:black;
     border-radius: 8px;
     color: white; 
-    font-size: 12px;
+    font-size: 10px;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-    width:55px;
-    height:20px; 
+    width:80px;
+    height:30px; 
 
 
 }
+
+#manager-but
+{
+    margin-top:-4%;
+       float:right;
+       margin-right:1%;
+       background-color:black;
+       border-radius: 8px;
+       color: white; 
+       font-size: 10px;
+       border: none;
+       cursor: pointer;
+       font-family: 'Quicksand', sans-serif;
+       width:80px;
+       height:30px; 
+   
+   
+   }
+
+
+
+
+
+
+
+
 .container-signup,.container-login
 {
     width: 40%;
@@ -136,16 +163,13 @@ k{
     color: black;
     font-family: 'Quicksand', sans-serif;
 }
-.field{
-    padding-left: 20px;
+.table{
+    
+    width:500px;
     /* background-color:lightgray; */
     margin-top: 0px;
     background: rgba(208, 200, 204, 0.5);
 
-}#ownerContainer{
-    width:70%;
-    margin-top: 0px;
-    background: rgba(208, 200, 204, 0.5);
 }
 
 .form-group {
@@ -202,8 +226,8 @@ height:30px;
 
  /* ON HOVER COLOR FOR ALL BUTTONS */
   .dropbtn:hover,#addbut:hover,#logoutbut:hover, #new-horse-but:hover, #edit-note-but:hover, .dropbtn:focus, 
-  #signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,#modBut:hover, #btnClose:hover {
-    background-color:#669966;
+  #signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,#modBut:hover, #btnClose:hover,#manager-but:hover{
+    background-color:	#556B2F;
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -217,16 +241,19 @@ height:30px;
     display: none;
     position: absolute;
     color:black;
-    background-color:gray;
+    background-color:white;
     width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size:16px;
     z-index: 1;
     font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
+    height:200px;
+    overflow: scroll;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
+    font-family: 'Quicksand', sans-serif;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -250,14 +277,15 @@ height:30px;
 #owner-first,
 #owner-last{
     font-family: 'Quicksand', sans-serif;
+    color:black;
    width: 30%;
 }
 
 .dropbtn{
-    margin-top:px;
+    
     background-color:black;
     border-radius: 8px;
-    color: white;
+    color:white;
   padding: 16px;
     font-size: 16px;
     border: none;
@@ -371,7 +399,7 @@ height:50px};
     width: 300px;
     height:50px;
 }
-#edithorse, #settoday, #edit-note-but{
+#edithorse, #settoday{
     background-color:black;
     border-radius: 8px;
     color: white;
@@ -405,3 +433,15 @@ label{
     margin-bottom:2%;
 }
 
+#edit-note-but{
+    background-color:white;
+    border-radius: 0px;
+    color: black;
+    /* padding: 16px; */
+    font-size: 10px;
+    border: solid black 1px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    width: 100px;
+    height:30px;
+}
