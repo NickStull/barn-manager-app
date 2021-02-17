@@ -54,8 +54,8 @@ router.get("/owners/:id", isAuthenticated, (req, res) => {
           }
       }
   }).then(response => {
-      console.log(unpack(response));
-      res.render("owner", { owner: unpack(response)});
+      console.log(req.user);
+      res.render("owner", { owner: unpack(response), user: req.user});
   })
   } else {
     db.Owner.findOne({
