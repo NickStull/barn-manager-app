@@ -2,6 +2,8 @@ let router = require("express").Router();
 let db = require("../models");
 var passport = require("../config/passport");
 
+let unpack = (data) => JSON.parse(JSON.stringify(data));
+
 router.post("/login", passport.authenticate("local"), function(req, res) {
     console.log(req.user)
     res.json(req.user);
@@ -17,20 +19,29 @@ router.post("/signup", (req, res) => {
         console.log("Owner Added");
     }).then(function() {
         res.redirect(307, "/api/login");
-      })
-})
+      });
+});
 
 router.post("/owners", (req, res) => {
     console.log("----------------post router------------------");
     console.log(req.body);
     db.Owner.create(req.body).then(response => {
         console.log("Owner Added");
-    }).then(function() {
+    }).then(dbOwner => {
         console.log("-----------data received------------"); 
-        console.log(res);
+        // console.log({ owner: unpack(dbOwner) });
+        // res.json(dbOwner);
         res.redirect(307, "/api/login");
     });
-})
+});
+
+
+// }).then(dbOwner => {
+//     // console.log(dbOwner);
+//     res.render("index", { owners: unpack(dbOwner) })
+//   })
+
+
 
 router.post("/owners/:id", (req, res) => {
     db.Horse.create({
@@ -42,7 +53,7 @@ router.post("/owners/:id", (req, res) => {
     }).then(response => {
         res.send("Horse Added");
     });
-})
+});
 
 // This is not done yet.  We need to figure out where we are going to edit the owner
 router.put("/owners/:id", (req, res) => {
@@ -52,8 +63,8 @@ router.put("/owners/:id", (req, res) => {
         }
     }).then(function(response){
         res.send("Changed owner info");
-    })
-})
+    });
+});
 
 router.delete("/owners/:id", (req, res) => {
     db.Owner.destroy({
@@ -62,9 +73,9 @@ router.delete("/owners/:id", (req, res) => {
         }
     }).then(function(response){
         res.send("Owner deleted");
-    })
+    });
     
-})
+});
 
 router.put("/horses/:id", (req, res) => {
     var column = req.body.column;
@@ -107,7 +118,7 @@ router.put("/edit-horse-note/:id", (req, res) => {
         {where: {id:req.params.id}}
     ).then(function(response){
         res.send("Edited horse note")
-    })
-})
+    });
+});
 
 module.exports = router;
