@@ -18,6 +18,10 @@
 
 <a href="/api/logout"><button id="logoutbut">Log Out</button></a>
 
+{{#if user.isAdmin}}
+    <a href="/manager"><button id="manager-but">View Owners</button></a>
+{{/if}}
+
 <p class="divided">
   <span class="divider"></span>
   
