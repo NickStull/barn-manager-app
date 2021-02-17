@@ -67,30 +67,35 @@
                 <td> {{ this.lastCoggins }} </td>
                 <td> {{ this.lastFarrier }} </td>
                 <td>
-                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Note</button>
+                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">View/Edit Note</button>
                     <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
+                        
                         <div class="modal-background"></div>
                         <div class="modal-card">
+                            
                             <header class="modal-card-head">
-                                <p class="modal-card-title">Edit Info</p>
+                                <p class="modal-card-title"><K>Add/Edit Note</K></p>
                                 <button class="delete close-modal" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
                                 <div class="content">
-                                    <div class="field">
-                                        <label class="label">Notes</label>
+                                    <div class="field"><BR>
+        
                                         <div class="control">
-                                            <textarea id="edit-notes-solo-{{this.id}}" class="input" type="name">{{ this.Notes }}</textarea>
+                                            
+                                            <textarea id=" edit-notes-solo-{{this.id}}" class="note-input" type="name">{{ this.Notes }}</textarea>
                                         </div>
+                                       
                                     </div>
                                 </div>
                             </section>
                             <footer class="modal-card-foot">
-                                <button class="button is-success edit-horse-note" type="submit"
+                                <button id="modBut" class="button is-success edit-horse-note" type="submit"
                                     data-id="{{ this.id }}">Save</button>
-                                <button id="btnClose" class="button close-modal">Cancel</button>
+                                <button id="modBut" class="button close-modal">Cancel</button>
+                                <BR>
                             </footer>
-                        </div>s
+                        </div>
                     </div>
                 </td>
             </tr>
@@ -101,7 +106,7 @@
                         <div class="modal-background"></div>
                         <div class="modal-card">
                             <header class="modal-card-head">
-                                <p class="modal-card-title">Edit Info</p>
+                                <p class="modal-card-title"><k>Edit Info</k></p>
                                 <button class="delete close-modal" aria-label="close"></button>
                             </header>
 
@@ -112,28 +117,28 @@
                                         <label id="addTitle" class="label"></label>
                                         <label class="label">Name</label>
                                         <div class="control">
-                                            <input id="edit-name-{{this.id}}" class="input" type="name" value="{{ this.name }}">
+                                            <input id="edit-name-{{this.id}}" class="edit-input" type="name" value="{{ this.name }}">
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <label class="label">Age</label>
                                         <div class="control">
-                                            <input id="edit-age-{{this.id}}" class="input" type="name" value="{{ this.age }}">
+                                            <input id="edit-age-{{this.id}}" class="edit-input" type="name" value="{{ this.age }}">
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <label class="label">Breed</label>
                                         <div class="control">
-                                            <input id="edit-breed-{{this.id}}" class="input" type="name" value="{{ this.breed }}">
+                                            <input id="edit-breed-{{this.id}}" class="edit-input" type="name" value="{{ this.breed }}">
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <label class="label">Flakes a.m.</label>
                                         <div class="control">
-                                            <input id="edit-flakes-am-{{this.id}}" class="input" type="name"
+                                            <input id="edit-flakes-am-{{this.id}}" class="edit-input" type="name"
                                                 value="{{ this.amFlakes }}">
                                         </div>
                                     </div>
@@ -141,7 +146,7 @@
                                     <div class="field">
                                         <label class="label">Flakes p.m.</label>
                                         <div class="control">
-                                            <input id="edit-flakes-pm-{{this.id}}" class="input" type="name"
+                                            <input id="edit-flakes-pm-{{this.id}}" class="edit-input" type="name"
                                                 value="{{ this.pmFlakes }}">
                                         </div>
                                     </div>
@@ -149,7 +154,7 @@
                                     <div class="field">
                                         <label class="label">Grain Serving</label>
                                         <div class="control">
-                                            <input id="edit-grain-serving-{{this.id}}" class="input" type="name"
+                                            <input id="edit-grain-serving-{{this.id}}" class="edit-input" type="name"
                                                 value="{{ this.grainServing }}">
                                         </div>
                                     </div>
@@ -157,7 +162,7 @@
                                     <div class="field">
                                         <label class="label">Last Dewormed</label>
                                         <div class="control">
-                                            <input id="edit-dewormed-{{this.id}}" class="input" type="name"
+                                            <input id="edit-dewormed-{{this.id}}" class="edit-input" type="name"
                                                 value="{{ this.lastDewormer }}">
                                         </div>
                                     </div>
@@ -165,7 +170,7 @@
                                     <div class="field">
                                         <label class="label">Last Vaccination</label>
                                         <div class="control">
-                                            <input id="edit-vaccination-{{this.id}}" class="input" type="name"
+                                            <input id="edit-vaccination-{{this.id}}" class="edit-input" type="name"
                                                 value="{{ this.lastVaccination }}">
                                         </div>
                                     </div>
@@ -173,7 +178,7 @@
                                     <div class="field">
                                         <label class="label">Last Coggins</label>
                                         <div class="control">
-                                            <input id="edit-coggins-{{this.id}}" class="input" type="name"
+                                            <input id="edit-coggins-{{this.id}}" class="edit-input" type="name"
                                                 value="{{ this.lastCoggins }}">
                                         </div>
                                     </div>
@@ -181,7 +186,7 @@
                                     <div class="field">
                                         <label class="label">Last Farrier</label>
                                         <div class="control">
-                                            <input id="edit-farrier-{{this.id}}" class="input" type="name"
+                                            <input id="edit-farrier-{{this.id}}" class="edit-input" type="name"
                                                 value="{{ this.lastFarrier }}">
                                         </div>
                                     </div>
@@ -189,7 +194,7 @@
                                     <div class="field">
                                         <label class="label">Notes</label>
                                         <div class="control">
-                                            <input id="edit-notes-{{this.id}}" class="input" type="name" value="{{ this.Notes }}">
+                                            <input id="edit-notes-{{this.id}}" class="edit-input" type="name" value="{{ this.Notes }}">
                                         </div>
                                     </div>
 
@@ -197,9 +202,9 @@
                             </section>
 
                             <footer class="modal-card-foot">
-                                <button class="button is-success edit-horse" type="submit"
+                                <button id="modBut" class="button is-success edit-horse" type="submit"
                                     data-id="{{ this.id }}">Save</button>
-                                <button id="btnClose" class="button close-modal">Cancel</button>
+                                <button id="modBut" class="button close-modal">Cancel</button>
                             </footer>
 
                         </div>
@@ -227,7 +232,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head">
-            <p class="modal-card-title">Horse Information</p>
+            <p class="modal-card-title"><k>Horse Information</k></p>
             <button id="modBut" class="delete close-modal" aria-label="close"></button>
         </header>
 
@@ -237,28 +242,28 @@
                     <label id="addTitle" class="label"></label>
                     <label class="label">Name</label>
                     <div class="control">
-                        <input id="horse-name" class="input" type="name" placeholder="">
+                        <input id="horse-name" class="owner-input" type="name" placeholder="">
                     </div>
                 </div>
 
                 <div class="field">
                     <label class="label">Age</label>
                     <div class="control">
-                        <input id="horse-age" class="input" type="name" placeholder="">
+                        <input id="horse-age" class="owner-input" type="name" placeholder="">
                     </div>
                 </div>
 
                 <div class="field">
                     <label class="label">Breed</label>
                     <div class="control">
-                        <input id="horse-breed" class="input" type="name" placeholder="">
+                        <input id="horse-breed" class="owner-input" type="name" placeholder="">
                     </div>
                 </div>
 
                 <div class="field">
                     <label class="label">Notes</label>
                     <div class="control">
-                        <input id="horse-notes" class="input" type="name" placeholder="">
+                        <input id="horse-notes" class="owner-input" type="name" placeholder="">
                     </div>
                 </div>
             </div>
@@ -266,7 +271,7 @@
 
         <footer class="modal-card-foot">
             <button id="modBut" class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
-            <button id="btnClose" class="button close-modal">Cancel</button>
+            <button id="modBut" class="button close-modal">Cancel</button>
         </footer>
 
     </div>
