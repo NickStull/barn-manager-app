@@ -4,7 +4,9 @@ $(function() {
       console.log("clicked");
       let newOwner = {
         firstName: $("#ownerFirst").val().trim(),
-        lastName: $("#ownerLast").val().trim()
+        lastName: $("#ownerLast").val().trim(),
+        email: $("#ownerEmail").val().trim(),
+        password: $("#ownerPass").val().trim()
       }
       $.ajax("/api/owners", {
         type: "POST",
