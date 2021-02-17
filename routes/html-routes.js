@@ -15,15 +15,15 @@ router.get("/", (req, res) => {
       res.redirect(`/owners/${req.user.id}`);
   }
 
-  res.render("signup");
+  res.render("login");
 })
 
-router.get("/login", function(req, res) {
+router.get("/signup", function(req, res) {
   // If the user already has an account send them to the members page
   if (req.user) {
     res.redirect("/");
   }
-  res.render("login");
+  res.render("signup");
 });
 
 router.get("/manager", isAuthenticated, function(req, res) {
