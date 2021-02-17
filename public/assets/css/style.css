@@ -27,17 +27,16 @@ spantwo{
 
 
 #logoutbut{
- margin-top:-7%;
-    float:right;
-    margin-right:1%;
+
+  
     background-color:black;
     border-radius: 8px;
     color: white; 
-    font-size: 10px;
+    font-size: 12px;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-    width:80px;
+    width:150px;
     height:30px; 
 
 
@@ -45,17 +44,15 @@ spantwo{
 
 #manager-but
 {
-    margin-top:-4%;
-       float:right;
-       margin-right:1%;
+      
        background-color:black;
        border-radius: 8px;
        color: white; 
-       font-size: 10px;
+       font-size: 12px;
        border: none;
        cursor: pointer;
        font-family: 'Quicksand', sans-serif;
-       width:80px;
+       width:150px;
        height:30px; 
    
    
@@ -76,10 +73,7 @@ spantwo{
     background: rgba(208, 200, 204, 0.5);
     height:300px;
 }
-/* .model-card-two{
-    width:200px;
-    background-color: lightgray;
-} */
+
 .note-input{
     height:200px;
     width:500px;
@@ -88,7 +82,8 @@ spantwo{
     font-size:16px;
 }
 .owner-input{
-    height:30px;
+    align-items: center;
+    height:50px;
     width:450px;
     margin-bottom:20px;
     margin-left:10px;
@@ -96,7 +91,7 @@ spantwo{
 
 }
 .edit-input{
-    height:30px;
+    height:40px;
     width:450px;
     margin-bottom:20px;
     margin-left:10px;
@@ -118,21 +113,25 @@ spantwo{
     font-size:16px;
 
 }
+
 .modal-card-head{
     height:60px;
-    width:600px;
+    width:500px;
     text-align: center;
-
+    background-color:lightgray;
+    background: rgba(102, 99, 100, 0.993);
 }
 .modal-card-foot{
-
-    width:600px;
+    background-color:lightgray;
+    background: rgba(102, 99, 100, 0.993);
+    width:500px;
    
 }
 .modal-card-body{
     height:400px;
-    width:600px;
-
+    width:500px;
+    background-color:lightgray;
+    background: rgba(102, 99, 100, 0.993);
 }
 
 
@@ -144,6 +143,15 @@ spantwo{
     width:400px;
     height:40px;
 
+
+}
+h1{
+ 
+ font-size: 45px;
+ font-family: 'Quicksand', sans-serif;
+ text-transform: uppercase;
+ /* line-height: .5; */
+	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
 
 }
 
@@ -158,8 +166,7 @@ h2{
 k{
     font-size: 40px;
     text-align: center;
-    text-decoration: underline;
-    /* padding-bottom:20px ; */
+  
     color: black;
     font-family: 'Quicksand', sans-serif;
 }
@@ -167,7 +174,7 @@ k{
     
     width:500px;
     /* background-color:lightgray; */
-    margin-top: 0px;
+    
     background: rgba(208, 200, 204, 0.5);
 
 }
@@ -210,12 +217,12 @@ th, td {
 }
 .new-horse-but{
     
-    margin-top: -20px;
+    /* margin-top: -20px; */
     background-color:black;
     border-radius: 8px;
     color: white; 
-     padding: 10px;
-    font-size: 16px;
+     
+    font-size: 12px;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
@@ -411,9 +418,16 @@ height:50px};
     width: 100px;
     height:20px;
 }
-
-label{
+.placeholder{
+    font-size:16px;
     font-family: 'Quicksand', sans-serif;
+    color:black;
+
+}
+label{
+    font-size:16px;
+    font-family: 'Quicksand', sans-serif;
+    color:black;
 }
 #signupbtn,#userlogin{
     background-color:black;
@@ -444,4 +458,13 @@ label{
     font-family: 'Quicksand', sans-serif;
     width: 100px;
     height:30px;
+}
+
+#new-owner-modal{
+    height:400px;
+margin-top:80px;
+
+}
+#ownerContainer{
+    padding:0px;
 }
