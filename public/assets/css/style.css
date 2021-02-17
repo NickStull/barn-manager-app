@@ -372,7 +372,7 @@ span{
 }   */
 
 
-#addbut{
+#addbut, #cancelbut{
     
     background-color:black;
     border-radius: 8px;
@@ -461,7 +461,7 @@ label{
 }
 
 #new-owner-modal{
-    height:400px;
+    height:60vh;
 margin-top:80px;
 
 }
