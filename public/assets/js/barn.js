@@ -18,21 +18,9 @@ $(document).ready(function() {
         type: "POST",
         data: newOwner
       }).then(function(data){
-        console.log("-------------gimmie that data---------------");
-        console.log(data);
-        // window.location.assign("/owners/" + id);
+        window.location.assign("/manager");
       });
     });
-
-    // function addOwner(owner) {
-    //   console.log("------------------ADD OWNER-----------------");
-    //   // $.post("/api/owners", {
-      //   type: "POST",
-      //   data: owner
-      // }).then(function(data) {
-      //   window.location.assign("/owners/" + id);
-      // })
-    // }
 
     $(".select-owner").on("click", function(event) {
       var id = $(this).data("id");

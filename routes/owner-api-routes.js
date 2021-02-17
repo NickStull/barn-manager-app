@@ -31,7 +31,8 @@ router.post("/owners", (req, res) => {
         console.log("-----------data received------------"); 
         // console.log({ owner: unpack(dbOwner) });
         // res.json(dbOwner);
-        res.redirect(307, "/api/login");
+        res.send("Added owner");
+        // res.redirect("/manager");
     });
 });
 
