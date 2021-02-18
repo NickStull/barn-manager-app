@@ -71,11 +71,7 @@
                 <td>
                     <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Add/Edit Note</button>
                     <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
-<<<<<<< HEAD
-                       <div class="overlay">
-=======
                         <div class="modal-background"></div>
->>>>>>> main
                         <div class="modal-card">
                             
                             <header class="modal-card-head">
@@ -95,9 +91,9 @@
                                 </div>
                             </section>
                             <footer class="modal-card-foot">
-                                <button id="modBut" class="button is-success edit-horse-note" type="submit"
+                                <button id="savebutone"class="modBut button is-success edit-horse-note" type="submit"
                                     data-id="{{ this.id }}">Save</button>
-                                <button id="modBut" class="button close-modal">Cancel</button>
+                                <button class="modBut button close-modal">Cancel</button>
                                 <BR>
                             </footer>
                             </div>
@@ -209,9 +205,9 @@
                             </section>
 
                             <footer class="modal-card-foot">
-                                <button id="modBut" class="button is-success edit-horse" type="submit"
+                                <button id="savebuttwo"class="button is-success edit-horse" type="submit"
                                     data-id="{{ this.id }}">Save</button>
-                                <button id="modBut" class="button close-modal">Cancel</button>
+                                <button class="modBut button close-modal">Cancel</button>
                             </footer>
 </div>
                         </div> 
@@ -279,8 +275,8 @@
         </section>
 
         <footer class="modal-card-foot">
-            <button id="modBut" class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
-            <button id="modBut" class="button close-modal">Cancel</button>
+            <button id="savebutthree" button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
+            <button class="modBut button close-modal">Cancel</button>
         </footer>
     
     </div>

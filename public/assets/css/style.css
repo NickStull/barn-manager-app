@@ -39,7 +39,7 @@ body{
 }
 
 /* styling for all buttons*/
-#logoutbut,#manager-but {
+#logoutbut,#manager-but,#new-horse-but,.delete-owner {
     background-color:black;
     border-radius: 8px;
     color: white; 
@@ -50,17 +50,6 @@ body{
     width:150px;
     height:30px; 
 }
-#new-horse-but,.delete-owner{
-    background-color:black;
-    border-radius: 8px;
-    color: white;   
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    width: 150px;
-    height:30px;
-  }
   .dropbtn{
     background-color:black;
     border-radius: 8px;
@@ -73,7 +62,7 @@ body{
     width: 300px;
     height:50px
 }
-#addbut, #cancelbut{
+#addbut, #cancelbut,.modBut,#savebutone,#savebuttwo,#savebutthree,#savebutfour,#logoutbut-index{
     background-color:black;
     border-radius: 8px;
     color: white;
@@ -85,17 +74,7 @@ body{
     width: 300px;
     height:50px
     }
-#modBut{
-    background-color:black;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    width: 300px;
-    height:50px;
-    }
+
 #edithorse, #settoday{
     background-color:black;
     border-radius: 8px;
@@ -118,17 +97,7 @@ body{
     width: 300px;
     height:30px;
     }
-#logoutbut-index{
-    background-color:black;
-    border-radius: 8px;
-    color: white;
-    font-size: 100%;
-    border: none;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    width: 300px;
-    height:50px
-    }
+
 #edit-note-but{
     background-color:white;
     border-radius: 0px;
@@ -142,8 +111,9 @@ body{
 }
 
  /* on hover styling for all buttons */
+ #savebutone:hover,#savebuttwo:hover,#savebutthree:hover,#savebutfour:hover,
  .dropbtn:hover,#addbut:hover,#logoutbut:hover,.delete-owner:hover, #new-horse-but:hover, #edit-note-but:hover, .dropbtn:focus, 
- #signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,#modBut:hover, #btnClose:hover,#manager-but:hover,#logoutbut-index:hover{
+ #signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,.modBut:hover, #btnClose:hover,#manager-but:hover,#logoutbut-index:hover{
    background-color:	#556B2F;
  }
 
@@ -226,11 +196,6 @@ body{
     max-width:100%;
     background-color: gray;
     font-family: 'Quicksand', sans-serif;
-}
-#new-owner-modal{
-    height: 80vh;
-    max-height: 100%; 
-    max-width:100%;
 }
 
 /* styling for all header tags */
