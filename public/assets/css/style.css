@@ -39,7 +39,7 @@ body{
 }
 
 /* styling for all buttons*/
-#logoutbut,#mangerbut {
+#logoutbut,#manager-but {
     background-color:black;
     border-radius: 8px;
     color: white; 
@@ -50,7 +50,7 @@ body{
     width:150px;
     height:30px; 
 }
-#new-horse-but{
+#new-horse-but,.delete-owner{
     background-color:black;
     border-radius: 8px;
     color: white;   
@@ -140,12 +140,9 @@ body{
     width: 100px;
     height:30px;
 }
-.delete-owner{
-    background-color: gray; color: black;
-    border-radius: 8px;
-}
+
  /* on hover styling for all buttons */
- .dropbtn:hover,#addbut:hover,#logoutbut:hover, #new-horse-but:hover, #edit-note-but:hover, .dropbtn:focus, 
+ .dropbtn:hover,#addbut:hover,#logoutbut:hover,.delete-owner:hover, #new-horse-but:hover, #edit-note-but:hover, .dropbtn:focus, 
  #signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,#modBut:hover, #btnClose:hover,#manager-but:hover,#logoutbut-index:hover{
    background-color:	#556B2F;
  }

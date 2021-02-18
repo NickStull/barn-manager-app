@@ -25,15 +25,13 @@
 <p class="divided">
   <span class="divider"></span></p>
 <BR>
-{{#if user.isAdmin}}
-<<<<<<< HEAD
-    <a href="/manager"><button id="managerbut">Back to View All Owners</button></a>
-=======
-    <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
-    <button class="delete-owner" data-id="{{ owner.id }}">Delete Owner</button>
->>>>>>> main
-{{/if}}
 <button id="new-horse-but" class="button modal-button new-horse-but"  data-target="#modal">Add New Horse</button>
+{{#if user.isAdmin}}
+ <button class="delete-owner" data-id="{{ owner.id }}">Delete Owner</button>
+    <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
+   
+{{/if}}
+
 <a href="/api/logout"><button id="logoutbut">Log Out</button></a>
 <div id="ownerContainer">
     <table class="table">
