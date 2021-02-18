@@ -56,9 +56,8 @@ router.delete("/delete-owners/:id", (req, res) => {
             id: req.params.id
         }
     }).then(function(response){
-        res.send("Owner deleted");
+        res.send("Deleted owner and associated horses");
     });
-    
 });
 
 router.put("/horses/:id", (req, res) => {
