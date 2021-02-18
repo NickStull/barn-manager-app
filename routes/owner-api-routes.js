@@ -5,7 +5,6 @@ var passport = require("../config/passport");
 let unpack = (data) => JSON.parse(JSON.stringify(data));
 
 router.post("/login", passport.authenticate("local"), function(req, res) {
-    console.log(req.user)
     res.json(req.user);
   });
 
@@ -16,33 +15,17 @@ res.redirect("/");
 
 router.post("/signup", (req, res) => {
     db.Owner.create(req.body).then(response => {
-        console.log("Owner Added");
     }).then(function() {
         res.redirect(307, "/api/login");
       });
 });
 
 router.post("/owners", (req, res) => {
-    console.log("----------------post router------------------");
-    console.log(req.body);
     db.Owner.create(req.body).then(response => {
-        console.log("Owner Added");
     }).then(dbOwner => {
-        console.log("-----------data received------------"); 
-        // console.log({ owner: unpack(dbOwner) });
-        // res.json(dbOwner);
         res.send("Added owner");
-        // res.redirect("/manager");
     });
 });
-
-
-// }).then(dbOwner => {
-//     // console.log(dbOwner);
-//     res.render("index", { owners: unpack(dbOwner) })
-//   })
-
-
 
 router.post("/owners/:id", (req, res) => {
     db.Horse.create({
@@ -67,15 +50,14 @@ router.put("/owners/:id", (req, res) => {
     });
 });
 
-router.delete("/owners/:id", (req, res) => {
+router.delete("/delete-owners/:id", (req, res) => {
     db.Owner.destroy({
         where: {
             id: req.params.id
         }
     }).then(function(response){
-        res.send("Owner deleted");
+        res.send("Deleted owner and associated horses");
     });
-    
 });
 
 router.put("/horses/:id", (req, res) => {
@@ -90,7 +72,6 @@ router.put("/horses/:id", (req, res) => {
 });
 
 router.put("/edit-horses/:id", (req, res) => {
-    console.log(req.body);
     db.Horse.update(
         {
             name: req.body.horseName,
