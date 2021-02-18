@@ -27,7 +27,7 @@
 <BR>
 {{#if user.isAdmin}}
     <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
-    <a href="/api/owners/{{ owner.id }}"><button class="delete-owner">Delete Owner</button></a>
+    <button class="delete-owner" data-id="{{ owner.id }}">Delete Owner</button>
 {{/if}}
 <button id="new-horse-but" class="button modal-button new-horse-but"  data-target="#modal">Add New Horse</button>
 <a href="/api/logout"><button id="logoutbut">Log Out</button></a>

@@ -1,4 +1,3 @@
-
 /* main div on index page */  
 #mainForm{
     width: 400px;
@@ -6,29 +5,26 @@
     background: rgba(208, 200, 204, 0.5);
     height:200px;
     margin-top:15px;
-    
 }
+
 /* sytling for thin line under headers */
 .divided {
     display: flex;
     align-items: center;
-  }
+}
   
-  .divider {
+.divider {
     flex-grow: 1;
     border-bottom: 1px solid black;
     margin: 0%
-  }
+}
 
 /* checksmarks on set today buttons */
-spantwo{
+spantwo {
   content: "\2713";
 }
 
-
-#logoutbut{
-
-  
+#logoutbut {
     background-color:black;
     border-radius: 8px;
     color: white; 
@@ -38,213 +34,178 @@ spantwo{
     font-family: 'Quicksand', sans-serif;
     width:150px;
     height:30px; 
-
-
 }
 
-#manager-but
-{
-      
-       background-color:black;
-       border-radius: 8px;
-       color: white; 
-       font-size: 12px;
-       border: none;
-       cursor: pointer;
-       font-family: 'Quicksand', sans-serif;
-       width:150px;
-       height:30px; 
-   
-   
-   }
+#manager-but {
+    background-color:black;
+    border-radius: 8px;
+    color: white; 
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    width:150px;
+    height:30px; 
+}
 
-
-
-
-
-
-
-
-.container-signup,.container-login
-{
+.container-signup,.container-login {
     width: 40%;
     background-color:lightgray;
-    /* opacity: 0.5; */
     background: rgba(208, 200, 204, 0.5);
     height:300px;
 }
 
-.note-input{
+.note-input {
     height:200px;
     width:500px;
     margin-bottom:20px;
     margin-left:10px;
     font-size:16px;
 }
-.owner-input{
+
+.owner-input {
     align-items: center;
     height:50px;
     width:450px;
     margin-bottom:20px;
     margin-left:10px;
     font-size:16px;
-
 }
-.edit-input{
+
+.edit-input {
     height:40px;
     width:450px;
     margin-bottom:20px;
     margin-left:10px;
     font-size:16px; 
 }
-.addowner-input{
+.addowner-input {
     height:40px;
     width:450px;
-    /* margin-bottom:20px;
-    margin-left:10px; */
     font-size:16px;
-
 }
-.newowner-input{
+
+.newowner-input {
     height:20px;
     width:300px;
     margin-bottom:20px;
     margin-left:10px;
     font-size:16px;
-
 }
 
-.modal-card-head{
+.modal-card-head {
     height:60px;
     width:500px;
     text-align: center;
     background-color:lightgray;
     background: rgba(102, 99, 100, 0.993);
 }
-.modal-card-foot{
+
+.modal-card-foot {
     background-color:lightgray;
     background: rgba(102, 99, 100, 0.993);
     width:500px;
-   
 }
-.modal-card-body{
+
+.modal-card-body {
     height:400px;
     width:500px;
     background-color:lightgray;
     background: rgba(102, 99, 100, 0.993);
 }
 
-
-.form-control{
+.form-control {
     height:30px;
     width:300px;
 }
-.input-newowner{
+
+.input-newowner {
     width:400px;
     height:40px;
-
-
 }
-h1{
- 
- font-size: 45px;
- font-family: 'Quicksand', sans-serif;
- text-transform: uppercase;
- /* line-height: .5; */
+
+h1 {
+    font-size: 45px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
 	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
-
 }
 
-h2{
+h2 {
     font-size: 30px;
     margin-left: 20px;
-    /* padding-bottom:20px ; */
     color: black;
     font-family: 'Quicksand', sans-serif;
 }
 
-k{
+k {
     font-size: 40px;
     text-align: center;
-  
     color: black;
     font-family: 'Quicksand', sans-serif;
 }
-.table{
-    
-    width:500px;
-    /* background-color:lightgray; */
-    
-    background: rgba(208, 200, 204, 0.5);
 
+.table {
+    width:500px;
+    background: rgba(208, 200, 204, 0.5);
 }
 
 .form-group {
     color:black;
 }
-.delete-owner{
-        background-color: gray; color: black;
-        border-radius: 8px;
 
+.delete-owner {
+    background-color: gray; color: black;
+    border-radius: 8px;
 }
 
-
-body{
-   
+body {
     position: absolute;
     width: 100%;
     min-height: 100%;
-    background-image: url("horsecopy.jpg"); /* The image used */
-    background-color: white; /* Used if the image is unavailable */
-    height: 500px; /* You must set a specified height */
- color: black;
+    background-image: url("horsecopy.jpg");
+    background-color: white;
+    height: 500px;
+    color: black;
     background-position: right bottom;
-    
-     /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    
-
-
-
+    background-repeat: no-repeat;
 }
 
-
-ul, li {list-style-type: none;}
+ul, li {
+    list-style-type: none;
+}
 
 th, td {
     padding: 5px;
     text-align: center;
 }
-.new-horse-but{
-    
-    /* margin-top: -20px; */
+
+.new-horse-but {
     background-color:black;
     border-radius: 8px;
     color: white; 
-     
     font-size: 12px;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-width: 150px;
-height:30px;
-  }
-
+    width: 150px;
+    height:30px;
+}
 
  /* ON HOVER COLOR FOR ALL BUTTONS */
-  .dropbtn:hover,#addbut:hover,#logoutbut:hover, #new-horse-but:hover, #edit-note-but:hover, .dropbtn:focus, 
-  #signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,#modBut:hover, #btnClose:hover,#manager-but:hover{
+.dropbtn:hover,#addbut:hover,#logoutbut:hover, #new-horse-but:hover, #edit-note-but:hover, .dropbtn:focus, 
+#signupbtn:hover,#userlogin:hover,#edithorse:hover,#settoday:hover,#modBut:hover, #btnClose:hover,#manager-but:hover {
     background-color:	#556B2F;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
     display: none;
     position: absolute;
     color:black;
@@ -256,124 +217,113 @@ height:30px;
     font-family: 'Quicksand', sans-serif;
     height:200px;
     overflow: scroll;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
     font-family: 'Quicksand', sans-serif;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
-
-  #addTitle{
-      font-size: 25px;
-      font-weight: bold;
-      color: black;
-      font-family: 'Quicksand', sans-serif;
-      
-  }
-  
-#owner-first,
-#owner-last{
-    font-family: 'Quicksand', sans-serif;
-    color:black;
-   width: 30%;
 }
 
-.dropbtn{
-    
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+
+#addTitle {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+}
+  
+#owner-first,
+#owner-last {
+    font-family: 'Quicksand', sans-serif;
+    color:black;
+    width: 30%;
+}
+
+.dropbtn {
     background-color:black;
     border-radius: 8px;
     color:white;
-  padding: 16px;
+    padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-width: 300px;
-height:50px};
-
-
-#owner-first,
-#owner-last,.form-control,#edit-note-modal{
-    font-family: 'Quicksand', sans-serif;
-   width: 60%;
-   height:30px;
-   color:black;
-   
+    width: 300px;
+    height: 50px;
 }
 
+#owner-first,
+#owner-last,.form-control,#edit-note-modal {
+    font-family: 'Quicksand', sans-serif;
+    width: 60%;
+    height:30px;
+    color:black;
+}
 
-
-*{
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
-.toptitle{
-   
+.toptitle {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 55px;
 	background: white;
 }
-span{
-  
+
+span {
 	line-height: .7;
 	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
 	animation: span 3s ease-in infinite alternate;
 }
-.main{
+
+.main {
 	display: flex;
 	justify-content: center;
     align-items: flex-start;
     font-family: 'Quicksand', sans-serif;
 	font-size: 42px;
 }
-.letter{
+
+.letter {
     font-family: 'Quicksand', sans-serif;
 	font-size: 42px;
 	display: inline-flex;
 	height: 30px;
 	width: 27px;
-	/* border: 2.5px solid #FF1EAD; */
 	border: 2.35px solid black;
 	border-radius: 14px;
 	box-shadow:
 		0 0 2px rgba(0, 0, 0, .75),
 		inset 0 0 2px rgba(0, 0, 0, .45);
-
 	animation: letter 3s ease-in-out infinite alternate;
 }
+
 @keyframes span {
 	0%,30%{ margin:0n .5%; }
 	70%,100%{margin: 0 .5%;}
 }
- @keyframes letter {
+
+@keyframes letter {
 	0%,30%{ width: 27px; }
 	70%,100%{ width: 30vw; } 
-}  
-
-/* @keyframes span {
-	0%,30%{ margin: 0 15px; }
-	70%,100%{ margin: 0 5px; }
 }
- @keyframes letter {
-	0%,30%{ width: 27px; }
-	70%,100%{ width: 30vw; } 
-}   */
 
-
-#addbut, #cancelbut{
-    
+#addbut, #cancelbut {
     background-color:black;
     border-radius: 8px;
     color: white;
@@ -382,23 +332,22 @@ span{
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-width: 300px;
-height:50px};
+    width: 300px;
+    height:50px;
+}
 
 
-.table-container{
+.table-container {
     background: rgba(255, 255, 255, 1) !important;
-    /* opacity: .7; */
     color:black;
     font-weight: bolder;
     border: 2px, thin, black;
 }
 
-#modBut{
+#modBut {
     background-color:black;
     border-radius: 8px;
     color: white;
-    /* padding: 16px; */
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -406,11 +355,11 @@ height:50px};
     width: 300px;
     height:50px;
 }
-#edithorse, #settoday{
+
+#edithorse, #settoday {
     background-color:black;
     border-radius: 8px;
     color: white;
-    /* padding: 16px; */
     font-size: 10px;
     border: none;
     cursor: pointer;
@@ -418,53 +367,52 @@ height:50px};
     width: 100px;
     height:20px;
 }
-.placeholder{
-    font-size:16px;
-    font-family: 'Quicksand', sans-serif;
-    color:black;
 
-}
-label{
+.placeholder {
     font-size:16px;
     font-family: 'Quicksand', sans-serif;
     color:black;
 }
-#signupbtn,#userlogin{
+
+label {
+    font-size:16px;
+    font-family: 'Quicksand', sans-serif;
+    color:black;
+}
+
+#signupbtn,#userlogin {
     background-color:black;
     border-radius: 8px;
     color: white;
-    /* padding: 16px; */
     font-size: 16px;
     border: none;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
     width: 300px;
-    height:30px;
-
-}
-#password-input
-{
-    margin-bottom:2%;
+    height: 30px;
 }
 
-#edit-note-but{
+#password-input {
+    margin-bottom: 2%;
+}
+
+#edit-note-but {
     background-color:white;
     border-radius: 0px;
     color: black;
-    /* padding: 16px; */
     font-size: 10px;
     border: solid black 1px;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
     width: 100px;
-    height:30px;
+    height: 30px;
 }
 
-#new-owner-modal{
+#new-owner-modal {
     height:60vh;
-margin-top:80px;
-
+    margin-top:80px;
 }
-#ownerContainer{
+
+#ownerContainer {
     padding:0px;
 }
