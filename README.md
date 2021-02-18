@@ -1,4 +1,4 @@
-                         HORSE MANAGER
+                                                                    HORSE MANAGER
 
 # Description
 
