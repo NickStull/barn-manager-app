@@ -4,6 +4,10 @@
 
 Horse Manager is an application that allows barn managers to keep track and input a horse's daily upkeep. In the application the barn manager can add specific details of a horses diet information to when they were last vaccinated along with specific notes. Not only is this beneficial to the barn manager but also the horse owner. It allows the horse owner to also log in to see these details about their horses.
 
+## Screenshots
+- ![Login page](./public/assets/css/loginPage.png)	
+- ![Manager page](./public/assets/css/manager.png)
+- ![Horse Owner page](./public/assets/css/horseOwner.png)
 
 # Tools Utilized 
 
