@@ -7,11 +7,9 @@ $(document).ready(function() {
         email: $("#ownerEmail").val().trim(),
         password: $("#ownerPass").val().trim()
       };
-      console.log(newOwner);
       if (!newOwner.email || !newOwner.password) {
         return;
       }
-      // addOwner(newOwner);
       $("#ownerEmail").val("");
       $("#ownerPass").val("");
       $.ajax("/api/owners", {
@@ -29,7 +27,7 @@ $(document).ready(function() {
   
     $(".delete-owner").on("click", function(event) {
         var id = $(this).data("id");
-        $.ajax("/api/owners/" + id, {
+        $.ajax("/api/delete-owners/" + id, {
           type: "DELETE"
         }).then(function(response){
           location.reload();
@@ -40,8 +38,6 @@ $(document).ready(function() {
       let today = new Date().toISOString().slice(0, 10);
       let id = $(this).data("id");
       let column = $(this).data("update");
-      console.log(`Updating ${column} to ${today} for horse id: ${id}`);
-
       $.ajax("/api/horses/" + id, {
         type: "PUT",
         data: {column, today}
@@ -72,7 +68,6 @@ $(document).ready(function() {
     $(".add-horse").on("click", function(event) {
       event.preventDefault();
       var id = $(this).data("id");
-      
       let newHorse = {
         horseName: $("#horse-name").val().trim(),
         horseAge: $("#horse-age").val().trim(),
@@ -88,7 +83,6 @@ $(document).ready(function() {
     });
 
     $(".new-owner-but").click(function() {
-      console.log("clicked add")
       $("html").addClass("is-clipped");
       $("#new-owner-modal").addClass("is-active");
    });
@@ -120,7 +114,6 @@ $(document).ready(function() {
 
     $(".edit-horse").click(function(){
       let id = $(this).data("id");
-      console.log(id);
       let editHorse = {
         horseName: $(`#edit-name-${id}`).val().trim(),
         horseAge: $(`#edit-age-${id}`).val().trim(),

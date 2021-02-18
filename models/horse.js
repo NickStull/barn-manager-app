@@ -55,6 +55,7 @@ module.exports = function(sequelize, DataTypes) {
   
     Horse.associate = function(models) {
       Horse.belongsTo(models.Owner, {
+        onDelete: "cascade",
         foreignKey: {
           allowNull: false
         }

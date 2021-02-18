@@ -1,20 +1,16 @@
 const db = require("../models");
 var router = require("express").Router();
 var path = require( 'path');
-
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 const { Router } = require("express");
-
 
 let unpack = (data) => JSON.parse(JSON.stringify(data));
 
 router.get("/", (req, res) => {
   // If the user already has an account send them to the members page
-
   if(req.user) {
       res.redirect(`/owners/${req.user.id}`);
   }
-
   res.render("login");
 })
 
@@ -31,13 +27,11 @@ router.get("/manager", isAuthenticated, function(req, res) {
     db.Owner.findAll({
       include: [db.Horse]
     }).then(dbOwner => {
-      // console.log(dbOwner);
       res.render("index", { owners: unpack(dbOwner) })
     })
   } else {
     res.redirect('/');
   }
-  
 });
 
 router.get("/owners/:id", isAuthenticated, (req, res) => {
@@ -54,7 +48,6 @@ router.get("/owners/:id", isAuthenticated, (req, res) => {
           }
       }
   }).then(response => {
-      console.log(req.user);
       res.render("owner", { owner: unpack(response), user: req.user});
   })
   } else {
@@ -70,11 +63,9 @@ router.get("/owners/:id", isAuthenticated, (req, res) => {
           }
       }
   }).then(response => {
-      console.log(unpack(response));
       res.render("owner", { owner: unpack(response)});
   })
   }
-  
 })
 
 module.exports = router;

@@ -26,7 +26,12 @@
   <span class="divider"></span></p>
 <BR>
 {{#if user.isAdmin}}
+<<<<<<< HEAD
     <a href="/manager"><button id="managerbut">Back to View All Owners</button></a>
+=======
+    <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
+    <button class="delete-owner" data-id="{{ owner.id }}">Delete Owner</button>
+>>>>>>> main
 {{/if}}
 <button id="new-horse-but" class="button modal-button new-horse-but"  data-target="#modal">Add New Horse</button>
 <a href="/api/logout"><button id="logoutbut">Log Out</button></a>
@@ -68,7 +73,11 @@
                 <td>
                     <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Add/Edit Note</button>
                     <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
+<<<<<<< HEAD
                        <div class="overlay">
+=======
+                        <div class="modal-background"></div>
+>>>>>>> main
                         <div class="modal-card">
                             
                             <header class="modal-card-head">

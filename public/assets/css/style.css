@@ -39,7 +39,7 @@ body{
 }
 
 /* styling for all buttons*/
-#logoutbut,#managerbut{
+#logoutbut,#mangerbut {
     background-color:black;
     border-radius: 8px;
     color: white; 
@@ -164,7 +164,8 @@ body{
     font-size:16px;
     font-family: 'Quicksand', sans-serif;
 }
-.owner-input{
+
+.owner-input {
     align-items: center;
     height:50px;
     width:450px;
@@ -173,7 +174,8 @@ body{
     font-size:16px;
     font-family: 'Quicksand', sans-serif;
 }
-.edit-input{
+
+.edit-input {
     height:40px;
     width:450px;
     margin-bottom:20px;
@@ -181,13 +183,14 @@ body{
     font-size:16px; 
     font-family: 'Quicksand', sans-serif;
 }
-.addowner-input{
+.addowner-input {
     height:40px;
     width:450px;
     font-size:16px;
     font-family: 'Quicksand', sans-serif;
 }
-.newowner-input{
+
+.newowner-input {
     height:20px;
     width:300px;
     margin-bottom:20px;
@@ -219,7 +222,8 @@ body{
     background-color:gray;
     font-family: 'Quicksand', sans-serif;
 }
-.modal-card-body{
+
+.modal-card-body {
     height:400px;
     width:500px;
     max-width:100%;
@@ -238,10 +242,9 @@ h1{
  font-family: 'Quicksand', sans-serif;
 }
 
-h2{
+h2 {
     font-size: 30px;
     margin-left: 20px;
-    /* padding-bottom:20px ; */
     color: black;
     font-family: 'Quicksand', sans-serif;
 }
@@ -252,7 +255,7 @@ h3{
     text-transform: capitalize;
 }
 
-k{
+k {
     font-size: 40px;
     text-align: center;
     color: black;
@@ -328,14 +331,16 @@ span{
 	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
 	animation: span 3s ease-in infinite alternate;
 }
-.main{
+
+.main {
 	display: flex;
 	justify-content: center;
     align-items: flex-start;
     font-family: 'Quicksand', sans-serif;
 	font-size: 42px;
 }
-.letter{
+
+.letter {
     font-family: 'Quicksand', sans-serif;
 	font-size: 42px;
 	display: inline-flex;
@@ -348,14 +353,11 @@ span{
 	inset 0 0 2px rgba(0, 0, 0, .45);
 	animation: letter 3s ease-in-out infinite alternate;
 }
+
 @keyframes span {
 	0%,30%{ margin:0n .5%; }
 	70%,100%{margin: 0 .5%;}
 }
- @keyframes letter {
-	0%,30%{ width: 27px; }
-	70%,100%{ width: 30vw; } 
-}  
 
 /* removes bullet points from lists */
 ul, li {list-style-type: none;}
