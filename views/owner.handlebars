@@ -19,14 +19,14 @@
   <span class="divider"></span></p>
 
 <Center>
-  
-<h1>{{ owner.firstName }} {{ owner.lastName }}</h1>
-<H3>Owner Profile </H3>
+
+<H2>Owner Profile {{ owner.firstName }} {{ owner.lastName }}  </H2>
+
 <p class="divided">
   <span class="divider"></span></p>
 <BR>
 {{#if user.isAdmin}}
-    <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
+    <a href="/manager"><button id="managerbut">Back to View All Owners</button></a>
 {{/if}}
 <button id="new-horse-but" class="button modal-button new-horse-but"  data-target="#modal">Add New Horse</button>
 <a href="/api/logout"><button id="logoutbut">Log Out</button></a>
@@ -34,7 +34,7 @@
     <table class="table">
         <BR>
         <thead>
-            <tr id=ownersLabel>
+            <tr id=owners>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Breed</th>
@@ -68,12 +68,11 @@
                 <td>
                     <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Add/Edit Note</button>
                     <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
-                       <
-                        <div class="modal-background"></div>
+                       <div class="overlay">
                         <div class="modal-card">
                             
                             <header class="modal-card-head">
-                                <p class="modal-card-title"><K>Add/Edit Note</K></p>
+                                <p class="modal-card-title"><K>Notes for {{ this.name }}</K></p>
                                 <button class="delete close-modal" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body">
@@ -94,6 +93,7 @@
                                 <button id="modBut" class="button close-modal">Cancel</button>
                                 <BR>
                             </footer>
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -103,10 +103,10 @@
                 <td>
                     <button id="edithorse" class="button is-primary modal-button edit-horse-but" data-target="#modal" data-id="{{ this.id }}">Edit {{ this.name }}</button>
                     <div id="edit-horse-{{ this.id }}" class="modal edit-horse-modal">
-                        <div class="modal-background"></div>
+                        <div class="overlay">
                         <div class="modal-card">
                             <header class="modal-card-head">
-                                <p class="modal-card-title"><k>Edit Info</k></p>
+                                <p class="modal-card-title"><k>Edit Info for {{ this.name }}</k></p>
                                 <button class="delete close-modal" aria-label="close"></button>
                             </header>
 
@@ -129,7 +129,7 @@
                                     </div>
 
                                     <div class="field">
-                                        <label class="label">Breed</label>
+                                        <label class="">Breed</label>
                                         <div class="control">
                                             <input id="edit-breed-{{this.id}}" class="edit-input" type="name" value="{{ this.breed }}">
                                         </div>
@@ -206,7 +206,7 @@
                                     data-id="{{ this.id }}">Save</button>
                                 <button id="modBut" class="button close-modal">Cancel</button>
                             </footer>
-
+</div>
                         </div> 
                      </div>
                 </td>
@@ -229,11 +229,13 @@
 </div>
 </center>
 {{!-- Add a Horse modal code --}}
+ 
 <div id="new-horse-modal" class="modal">
-    <div class="modal-background"></div>
+  <div class="overlay">
     <div class="modal-card">
+        
         <header class="modal-card-head">
-            <p class="modal-card-title"><k>Horse Information</k></p>
+            <p class="modal-card-title"><k>New Horse Information</k></p>
             <button id="modBut" class="delete close-modal" aria-label="close"></button>
         </header>
 
@@ -273,7 +275,7 @@
             <button id="modBut" class="button is-success add-horse" type="submit" data-id="{{ owner.id }}">Save</button>
             <button id="modBut" class="button close-modal">Cancel</button>
         </footer>
-
+    
     </div>
 </div>
- 
+ </div>
