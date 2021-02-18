@@ -9,7 +9,7 @@ $(document).ready(function() {
       };
       if (!newOwner.email || !newOwner.password) {
         return;
-      }
+      };
       $("#ownerEmail").val("");
       $("#ownerPass").val("");
       $.ajax("/api/owners", {
@@ -43,8 +43,8 @@ $(document).ready(function() {
         data: {column, today}
       }).then(function(response){
         location.reload();
-      })
-    })
+      });
+    });
 
         /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
@@ -60,9 +60,9 @@ $(document).ready(function() {
           var openDropdown = dropdowns[i];
           if (openDropdown.classList.contains('show')) {
             openDropdown.classList.remove('show');
-          }
-        }
-      }
+          };
+        };
+      };
     };
 
     $(".add-horse").on("click", function(event) {
@@ -102,7 +102,7 @@ $(document).ready(function() {
       let id = $(this).data("id");
       $("html").addClass("is-clipped");
       $("#edit-note-" + id).addClass("is-active");
-    })
+    });
     
     $(".close-modal").click(function() {
        $("html").removeClass("is-clipped");
@@ -126,14 +126,14 @@ $(document).ready(function() {
         lastCoggins: $(`#edit-coggins-${id}`).val().trim(),
         lastFarrier: $(`#edit-farrier-${id}`).val().trim(),
         editNotes: $(`#edit-notes-${id}`).val().trim()
-      }
+      };
       $.ajax("/api/edit-horses/" + id, {
         type: "PUT",
         data: editHorse
       }).then(function(response){
         location.reload();
-      })
-    })
+      });
+    });
 
     $(".edit-horse-note").click(function(){
       let id = $(this).data("id");
@@ -143,6 +143,6 @@ $(document).ready(function() {
         data: {note}
       }).then(function(response){
         location.reload();
-      })
-    })
-})
+      });
+    });
+});

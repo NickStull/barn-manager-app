@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
       res.redirect(`/owners/${req.user.id}`);
   }
   res.render("login");
-})
+});
 
 router.get("/signup", function(req, res) {
   // If the user already has an account send them to the members page
@@ -28,10 +28,10 @@ router.get("/manager", isAuthenticated, function(req, res) {
       include: [db.Horse]
     }).then(dbOwner => {
       res.render("index", { owners: unpack(dbOwner) })
-    })
+    });
   } else {
     res.redirect('/');
-  }
+  };
 });
 
 router.get("/owners/:id", isAuthenticated, (req, res) => {
@@ -64,8 +64,8 @@ router.get("/owners/:id", isAuthenticated, (req, res) => {
       }
   }).then(response => {
       res.render("owner", { owner: unpack(response)});
-  })
-  }
-})
+  });
+  };
+});
 
 module.exports = router;

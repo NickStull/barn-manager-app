@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     if (!userData.email || !userData.password) {
       return;
-    }
+    };
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.firstName, userData.lastName,userData.email, userData.password);
     emailInput.val("");
@@ -39,10 +39,10 @@ $(document).ready(function() {
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
-  }
+  };
 
   function handleLoginErr(err) {
     $("#alert .msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
-  }
+  };
 });
