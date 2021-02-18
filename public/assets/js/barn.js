@@ -1,18 +1,24 @@
-$(function() {
-    $(".create-form").on("click", function(event) {
+$(document).ready(function() {
+    $(".add-owner").on("click", function(event) {
       event.preventDefault();
-      console.log("clicked");
       let newOwner = {
         firstName: $("#ownerFirst").val().trim(),
         lastName: $("#ownerLast").val().trim(),
         email: $("#ownerEmail").val().trim(),
         password: $("#ownerPass").val().trim()
+      };
+      console.log(newOwner);
+      if (!newOwner.email || !newOwner.password) {
+        return;
       }
+      // addOwner(newOwner);
+      $("#ownerEmail").val("");
+      $("#ownerPass").val("");
       $.ajax("/api/owners", {
         type: "POST",
         data: newOwner
-      }).then(function(response){
-        location.reload();
+      }).then(function(data){
+        window.location.assign("/manager");
       });
     });
 

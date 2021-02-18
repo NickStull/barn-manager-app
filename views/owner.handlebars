@@ -15,29 +15,22 @@
     <span>E</span>
     <span>R</span>
 </div>
+<p class="divided">
+  <span class="divider"></span></p>
 
-<a href="/api/logout"><button id="logoutbut">Log Out</button></a>
-
+<Center>
+  
+<h1>{{ owner.firstName }} {{ owner.lastName }}</h1>
+<H3>Owner Profile </H3>
+<p class="divided">
+  <span class="divider"></span></p>
+<BR>
 {{#if user.isAdmin}}
     <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
     <a href="/api/owners/{{ owner.id }}"><button class="delete-owner">Delete Owner</button></a>
 {{/if}}
-
-<p class="divided">
-  <span class="divider"></span>
-  
-</p>
-<center>
-  Owner Profile For
-<h2>{{ owner.firstName }} {{ owner.lastName }}</h2>
-
-
-
-<BR>
-</center>
-<center>
 <button id="new-horse-but" class="button modal-button new-horse-but"  data-target="#modal">Add New Horse</button>
-<BR>
+<a href="/api/logout"><button id="logoutbut">Log Out</button></a>
 <div id="ownerContainer">
     <table class="table">
         <BR>
@@ -248,30 +241,29 @@
             <div class="content">
                 <div class="field">
                     <label id="addTitle" class="label"></label>
-                    <label class="label">Name</label>
+                   
                     <div class="control">
-                        <input id="horse-name" class="owner-input" type="name" placeholder="">
+                        <input id="horse-name" class="owner-input" type="name" placeholder="Name">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label">Age</label>
+                    
                     <div class="control">
-                        <input id="horse-age" class="owner-input" type="name" placeholder="">
+                        <input id="horse-age" class="owner-input" type="name" placeholder="Age">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label">Breed</label>
+                    
                     <div class="control">
-                        <input id="horse-breed" class="owner-input" type="name" placeholder="">
+                        <input id="horse-breed" class="owner-input" type="name" placeholder="Breed">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label">Notes</label>
-                    <div class="control">
-                        <input id="horse-notes" class="owner-input" type="name" placeholder="">
+                   <div class="control">
+                        <input id="horse-notes" class="owner-input" type="name" placeholder="Notes">
                     </div>
                 </div>
             </div>

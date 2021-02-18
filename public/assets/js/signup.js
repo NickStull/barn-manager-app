@@ -9,7 +9,7 @@ $(document).ready(function() {
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
     event.preventDefault();
-    console.log("hit");
+    console.log("--------------------hit-----------------------");
     var userData = {
       firstName: firstName.val().trim(),
       lastName: lastName.val().trim(),
@@ -29,7 +29,7 @@ $(document).ready(function() {
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
   function signUpUser(firstName, lastName, email, password) {
-    console.log("hit function");
+    console.log("------------------hit function-----------------");
     $.post("/api/signup", {
       firstName: firstName,
       lastName: lastName,
