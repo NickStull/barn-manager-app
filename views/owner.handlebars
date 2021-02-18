@@ -20,6 +20,7 @@
 
 {{#if user.isAdmin}}
     <a href="/manager"><button id="manager-but">Back to View All Owners</button></a>
+    <a href="/api/owners/{{ owner.id }}"><button class="delete-owner">Delete Owner</button></a>
 {{/if}}
 
 <p class="divided">
@@ -75,7 +76,6 @@
                 <td>
                     <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Add/Edit Note</button>
                     <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
-                       <
                         <div class="modal-background"></div>
                         <div class="modal-card">
                             
