@@ -20,7 +20,7 @@
 
 <Center>
 
-<H2>Owner Profile {{ owner.firstName }} {{ owner.lastName }}  </H2>
+<h3> {{ owner.firstName }} {{ owner.lastName }}</h3> <h2>Owner Profile </H2>
 
 <p class="divided">
   <span class="divider"></span></p>
@@ -69,7 +69,12 @@
                 <td> {{ this.lastCoggins }} </td>
                 <td> {{ this.lastFarrier }} </td>
                 <td>
-                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">Add/Edit Note</button>
+                    <button id="edit-note-but" class="edit-note-but" data-id="{{ this.id }}" data-update="Notes">
+                        <img class="img-responsive" src="../assets/css/note.png" width=10px
+                alt="Photo of Workday Scheduler">
+                </button>
+
+
                     <div id="edit-note-{{ this.id }}" class="modal edit-note-modal">
                         <div class="modal-background"></div>
                         <div class="modal-card">

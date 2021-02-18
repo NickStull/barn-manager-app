@@ -98,7 +98,7 @@ body{
     height:30px;
     }
 
-#edit-note-but{
+/* #edit-note-but{
     background-color:white;
     border-radius: 0px;
     color: black;
@@ -108,7 +108,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     width: 100px;
     height:30px;
-}
+} */
 
  /* on hover styling for all buttons */
  #savebutone:hover,#savebuttwo:hover,#savebutthree:hover,#savebutfour:hover,
@@ -205,13 +205,13 @@ h1{
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 20px;
     color: black;
     font-family: 'Quicksand', sans-serif;
 }
 h3{
-    font-size: 20px;
+    font-size: 40px;
     color: black;
     font-family: 'Quicksand', sans-serif;
     text-transform: capitalize;
@@ -339,8 +339,13 @@ ul, li {list-style-type: none;}
 spantwo{
   content: "\2713";
 }
-
-
+.img-responsive{
+    box-sizing: border-box;
+    width: 90%;
+    height:60%;
+    align-items: center;
+    
+}
 
 
 /* CSS CODE THAT SEEMS TO NOT BE NEEDED AND OKAY TO DELETE  */
@@ -373,3 +378,4 @@ spantwo{
 
 
 
+   
